@@ -797,381 +797,592 @@ const DRUG_CLASSES = [
 ];
 
 const QUIZ_QUESTIONS = [
+
+  // ══════════════════════════════════════════════
+  // ANTICOAGULANTS
+  // ══════════════════════════════════════════════
   {
-    q: "A patient on heparin has a platelet count that drops from 220,000 to 85,000 on day 8 of therapy. What is the priority nursing action?",
-    options: ["Increase the heparin dose", "Discontinue heparin immediately and notify provider", "Monitor platelets daily and continue therapy", "Administer protamine sulfate"],
-    answer: 1,
-    explanation: "This presentation is classic HIT (Heparin-Induced Thrombocytopenia) — platelet drop >50% between days 5–10. HIT is paradoxically prothrombotic (not hemorrhagic). Heparin must be stopped immediately and a non-heparin anticoagulant started. Protamine is used for heparin overdose, not HIT.",
+    type: "standard",
+    q: "A nurse is caring for a client receiving a continuous heparin infusion for deep vein thrombosis. The morning aPTT result is 38 seconds (therapeutic range 60–100 seconds). Which action should the nurse take FIRST?",
+    options: [
+      "Discontinue the heparin infusion and notify the provider",
+      "Continue the infusion at the current rate and recheck aPTT in 6 hours",
+      "Notify the provider and anticipate an order to increase the infusion rate",
+      "Administer protamine sulfate per standing order"
+    ],
+    answer: 2,
+    explanation: "An aPTT of 38 seconds is subtherapeutic (therapeutic range 60–100 sec, approximately 1.5–2.5× normal of ~25 sec). The client remains at risk for clot extension. The nurse should notify the provider and anticipate an order to INCREASE the rate. Protamine sulfate reverses heparin overdose, not subtherapeutic levels. Discontinuing would leave the client unprotected.",
     class: "Anticoagulants",
+    nclex_category: "Pharmacological Therapies",
   },
   {
-    q: "A patient on warfarin has an INR of 5.8 with no active bleeding. Which intervention is most appropriate?",
-    options: ["Administer fresh frozen plasma (FFP)", "Hold warfarin and monitor; administer oral Vitamin K if needed", "Give protamine sulfate", "Continue warfarin at current dose"],
-    answer: 1,
-    explanation: "For supratherapeutic INR (>5) without bleeding: hold warfarin. Oral Vitamin K can be given for faster reversal. FFP/4-factor PCC is reserved for serious or life-threatening bleeding. Protamine reverses heparin, not warfarin.",
+    type: "sata",
+    q: "A nurse is assessing a client who has been on heparin infusion for 8 days. The platelet count has dropped from 240,000 to 74,000/mm³. The client now has a new right leg DVT despite therapeutic aPTT levels. Which actions should the nurse take? SELECT ALL THAT APPLY.",
+    options: [
+      "Discontinue the heparin infusion immediately",
+      "Administer protamine sulfate to reverse heparin",
+      "Notify the provider of findings consistent with HIT",
+      "Anticipate transitioning to a non-heparin anticoagulant such as argatroban",
+      "Apply compression stockings to the affected leg",
+      "Document the findings and continue to monitor platelet counts"
+    ],
+    answer: [0, 2, 3],
+    explanation: "This presentation — thrombocytopenia >50% drop on days 5–10 WITH new thrombosis despite therapeutic anticoagulation — is classic Heparin-Induced Thrombocytopenia (HIT Type II). HIT is paradoxically THROMBOTIC. Actions: STOP heparin immediately (A), notify the provider (C), and anticipate a non-heparin anticoagulant like argatroban or fondaparinux (D). Protamine sulfate treats heparin overdose, not HIT. Compression stockings are contraindicated with acute DVT.",
     class: "Anticoagulants",
+    nclex_category: "Pharmacological Therapies",
   },
   {
-    q: "Before administering digoxin, the nurse assesses an apical pulse of 58 bpm. The patient's potassium level is 3.1 mEq/L. What should the nurse do?",
-    options: ["Administer the digoxin as ordered", "Hold the digoxin and notify the provider of both findings", "Administer the digoxin and recheck potassium in 2 hours", "Give supplemental potassium then administer digoxin"],
-    answer: 1,
-    explanation: "Two concerns here: HR <60 (hold parameter for digoxin) AND hypokalemia (K⁺ <3.5), which dramatically increases risk of digoxin toxicity. Both findings must be reported to the provider before giving the drug.",
-    class: "Cardiac Drugs",
+    type: "vignette",
+    vignette: "A 68-year-old client with atrial fibrillation has been taking warfarin 5mg daily for 3 years. Her INR today is 5.9. She denies any active bleeding. Review of her medication list reveals she recently started clarithromycin for a respiratory infection 5 days ago.",
+    q: "The nurse understands that the elevated INR is MOST likely due to which mechanism?",
+    options: [
+      "Clarithromycin inhibits CYP2C9, reducing warfarin metabolism and increasing its serum level",
+      "Clarithromycin directly enhances the anticoagulant effect of warfarin at receptor sites",
+      "The client has been consuming excess Vitamin K which paradoxically raises INR",
+      "Clarithromycin displaces warfarin from protein-binding sites, decreasing its effectiveness"
+    ],
+    answer: 0,
+    explanation: "Clarithromycin is a potent CYP3A4 AND CYP2C9 inhibitor. Warfarin (especially the S-enantiomer) is metabolized by CYP2C9. When clarithromycin inhibits this enzyme, warfarin accumulates → INR rises dangerously. This is one of the most tested drug-drug interactions on NCLEX. For an INR of 5.9 without bleeding: hold warfarin, consider oral Vitamin K, and monitor closely.",
+    class: "Anticoagulants",
+    nclex_category: "Pharmacological Therapies",
   },
   {
-    q: "A patient received tPA for ischemic stroke 6 hours ago. The nurse notes the patient is requesting aspirin for a headache. What is the correct response?",
-    options: ["Administer aspirin 325mg as it treats both pain and prevents re-stroke", "Administer acetaminophen instead; hold antiplatelet therapy for 24 hours post-tPA", "Hold all analgesics for 24 hours", "Administer the aspirin but document the administration"],
-    answer: 1,
-    explanation: "Antiplatelet agents (aspirin, clopidogrel) and anticoagulants are contraindicated for 24 hours post-tPA administration due to hemorrhagic conversion risk. Acetaminophen is safe for pain/fever management during this window.",
-    class: "Thrombolytics",
+    type: "priority",
+    q: "A nurse is caring for four clients. Which client requires IMMEDIATE assessment related to anticoagulation therapy?",
+    options: [
+      "A client on warfarin whose INR is 2.8 and who reports mild headache",
+      "A client on enoxaparin who reports pain at the injection site",
+      "A client on rivaroxaban who reports sudden severe headache, confusion, and left-sided weakness",
+      "A client on heparin infusion whose aPTT result is 72 seconds"
+    ],
+    answer: 2,
+    explanation: "Using ABC prioritization and Maslow's hierarchy: sudden severe headache + confusion + focal neurological deficits in a client on anticoagulation = INTRACRANIAL HEMORRHAGE until proven otherwise. This is a life-threatening emergency requiring IMMEDIATE assessment and intervention (stop anticoagulant, emergent CT scan, andexanet alfa for rivaroxaban reversal). The other clients have expected or manageable findings.",
+    class: "Anticoagulants",
+    nclex_category: "Safety and Infection Control",
   },
+
+  // ══════════════════════════════════════════════
+  // ANTIPLATELETS
+  // ══════════════════════════════════════════════
   {
-    q: "Which electrolyte imbalance puts a patient on furosemide at greatest risk for digoxin toxicity?",
-    options: ["Hypernatremia", "Hypokalemia", "Hypercalcemia", "Hypermagnesemia"],
+    type: "standard",
+    q: "A client who takes clopidogrel following coronary stent placement also takes omeprazole for GERD. The nurse recognizes this combination is concerning because:",
+    options: [
+      "Both drugs compete for the same renal excretion pathway, increasing toxicity risk",
+      "Omeprazole inhibits CYP2C19, reducing activation of clopidogrel and decreasing its antiplatelet effect",
+      "Clopidogrel decreases gastric acid production, making omeprazole unnecessary",
+      "The combination increases bleeding risk by enhancing platelet inhibition"
+    ],
     answer: 1,
-    explanation: "Furosemide is a potassium-wasting diuretic. Hypokalemia (low K⁺) increases myocardial sensitivity to digoxin by competing for the same Na/K-ATPase binding site — meaning digoxin levels may appear therapeutic but toxicity still occurs.",
-    class: "Diuretics",
-  },
-  {
-    q: "A patient on clopidogrel is scheduled for a non-emergency CABG in 3 days. What should the nurse anticipate?",
-    options: ["Proceed with surgery; clopidogrel has no surgical implications", "Recommend holding clopidogrel for 5–7 days before surgery", "Switch to aspirin immediately and proceed in 3 days", "Administer platelet transfusion the day before surgery"],
-    answer: 1,
-    explanation: "Clopidogrel irreversibly inhibits platelets for their lifespan (~7–10 days). Guidelines recommend holding it 5–7 days pre-CABG to reduce excessive surgical bleeding. The surgeon and cardiologist must weigh thrombotic vs. bleeding risk.",
+    explanation: "Clopidogrel is a PRODRUG requiring hepatic activation by CYP2C19. Omeprazole competitively inhibits CYP2C19, reducing conversion of clopidogrel to its active metabolite → reduced antiplatelet effect → increased stent thrombosis risk. This is a critical drug interaction post-PCI. Pantoprazole has less CYP2C19 inhibition and is preferred if a PPI is needed.",
     class: "Antiplatelets",
+    nclex_category: "Pharmacological Therapies",
   },
   {
-    q: "A nurse is teaching a patient newly started on metoprolol succinate (Toprol XL) for heart failure. Which statement by the patient indicates understanding?",
-    options: ["'I can stop this medication if my heart rate feels normal.'", "'I should take my pulse before each dose and call if it's below 60.'", "'This medication will help my blood sugar stay stable.'", "'I can take ibuprofen for pain while on this medication.'"],
-    answer: 1,
-    explanation: "Patients should monitor HR and hold metoprolol (calling provider) if HR <60. Beta blockers must NEVER be abruptly stopped — rebound can cause MI. They can mask hypoglycemia symptoms and NSAIDs can reduce antihypertensive effectiveness.",
-    class: "Cardiac Drugs",
-  },
-  {
-    q: "A patient on spironolactone calls to report they've been taking potassium supplements their friend gave them. The nurse's priority is to:",
-    options: ["Reassure the patient that extra potassium is always beneficial", "Instruct the patient to stop the supplements and check their potassium level", "Tell the patient to take half the spironolactone dose", "Document and monitor at the next scheduled appointment"],
-    answer: 1,
-    explanation: "Spironolactone is a potassium-SPARING diuretic — it already retains potassium. Adding K⁺ supplements can cause dangerous hyperkalemia (peaked T-waves, bradycardia, cardiac arrest). This requires immediate intervention.",
-    class: "Diuretics",
-  },
-  {
-    q: "A patient is receiving IV vancomycin and develops sudden flushing, erythema of the face and neck, and hypotension during the infusion. What is the nurse's best action?",
-    options: ["Stop the infusion and administer epinephrine for anaphylaxis", "Slow the infusion rate and administer diphenhydramine as ordered", "Discontinue vancomycin permanently and notify the provider", "Continue the infusion and monitor vital signs every 15 minutes"],
-    answer: 1,
-    explanation: "This is Red Man Syndrome — a rate-related infusion reaction (not a true allergy) caused by histamine release. It is NOT anaphylaxis. Management: slow or stop the infusion, give diphenhydramine, and resume at a slower rate (infuse over at least 60 min). Epinephrine is for true anaphylaxis.",
-    class: "Antibiotics",
-  },
-  {
-    q: "A nurse is discharging a patient treated with metronidazole for a C. difficile infection. Which instruction is most important?",
-    options: ["'Take this medication with a full glass of milk.'", "'Avoid all alcohol for at least 48-72 hours after completing therapy.'", "'This medication may cause your vision to become blurred temporarily.'", "'You may take ibuprofen if you experience abdominal discomfort.'"],
-    answer: 1,
-    explanation: "Metronidazole causes a severe disulfiram-like reaction with alcohol — nausea, vomiting, flushing, tachycardia. Patients must avoid alcohol DURING treatment AND for 48-72 hours after the last dose. Milk is not required. Vision changes and NSAIDs are not primary concerns here.",
-    class: "Antibiotics",
-  },
-  {
-    q: "A patient received morphine 4mg IV 20 minutes ago and now has a respiratory rate of 8 breaths/min and is difficult to arouse. What is the priority nursing action?",
-    options: ["Reposition the patient and apply a non-rebreather mask", "Administer naloxone (Narcan) as ordered and prepare to repeat dosing", "Notify the provider and document the finding", "Withhold the next scheduled dose of morphine"],
-    answer: 1,
-    explanation: "RR <12 with sedation indicates opioid-induced respiratory depression — a medical emergency requiring immediate naloxone administration. Naloxone's half-life (30-90 min) is shorter than morphine's, so repeat doses may be needed and the patient must be monitored for re-narcotization. Repositioning alone is inadequate.",
-    class: "Pain & Opioids",
-  },
-  {
-    q: "A patient with bipolar disorder on lithium presents with coarse tremors, confusion, and ataxia. His lithium level is 2.1 mEq/L. Which intervention is the priority?",
-    options: ["Administer an extra dose of lithium to stabilize the level", "Hold the next lithium dose and increase sodium intake", "Notify the provider immediately — lithium toxicity requires urgent intervention", "Administer activated charcoal orally"],
-    answer: 2,
-    explanation: "Lithium level >1.5 mEq/L with neurological symptoms (confusion, ataxia, coarse tremor) indicates moderate-to-severe toxicity. This is a medical emergency — the provider must be notified immediately. Severe toxicity may require hemodialysis. Lithium has NO antidote. The immediate priority is provider notification and stopping the drug.",
-    class: "Psych Meds",
-  },
-  {
-    q: "A patient with Type 2 diabetes on metformin is scheduled for a CT scan with IV contrast tomorrow. What should the nurse do?",
-    options: ["Administer metformin as scheduled on the morning of the procedure", "Hold metformin before and for 48 hours after contrast; reassess renal function before restarting", "Switch the patient to insulin for the day of the procedure only", "Double the metformin dose the day before to maintain glycemic control"],
-    answer: 1,
-    explanation: "IV contrast can cause acute kidney injury. If renal function deteriorates, metformin accumulates and causes potentially fatal lactic acidosis. Guidelines recommend holding metformin before contrast and for 48 hours after, then rechecking renal function before resuming.",
-    class: "Endocrine",
-  },
-  {
-    q: "A patient uses an albuterol inhaler 4-5 times per week for asthma symptoms. What does this pattern indicate?",
-    options: ["The patient is correctly using their rescue inhaler as directed", "Asthma is inadequately controlled and a controller medication should be initiated or adjusted", "The patient is overusing the inhaler and should limit use to once weekly", "This frequency is normal during allergy season and requires no action"],
-    answer: 1,
-    explanation: "Albuterol use >2 days per week for symptom relief indicates inadequately controlled asthma per NAEPP guidelines. This patient needs step-up therapy, typically initiation or increase of an inhaled corticosteroid (ICS). Overuse of rescue inhalers is associated with increased asthma mortality.",
-    class: "Respiratory",
-  },
-  {
-    q: "A patient taking clopidogrel after stent placement also takes omeprazole daily. The nurse's best response is to:",
-    options: ["Reassure the patient that both medications are safe to take together", "Notify the provider — omeprazole reduces clopidogrel's antiplatelet effectiveness via CYP2C19 competition", "Instruct the patient to take both medications at the same time each morning", "Tell the patient to discontinue omeprazole immediately without consulting the provider"],
-    answer: 1,
-    explanation: "Both omeprazole and clopidogrel are metabolized by CYP2C19. Omeprazole competitively inhibits this enzyme, reducing conversion of clopidogrel (prodrug) to its active form. This is a significant drug-drug interaction in post-stent patients. The provider should consider an alternative PPI (e.g., pantoprazole) with less CYP2C19 interaction.",
-    class: "GI Drugs",
-  },
-  {
-    q: "A patient is prescribed alendronate (Fosamax) for osteoporosis. Which instruction is most important for the nurse to include?",
-    options: ["Take the medication with a full glass of orange juice to improve absorption", "Remain upright for at least 30 minutes after taking the medication and take with plain water only", "Take the medication with food to reduce GI upset", "Crush the tablet and mix with yogurt if swallowing is difficult"],
-    answer: 1,
-    explanation: "Alendronate must be taken on an empty stomach with 8 oz of plain water ONLY (no juice, coffee, or food). The patient must remain upright (sitting or standing) for at least 30 minutes to prevent esophageal ulceration. Crushing or taking with food significantly reduces absorption and increases GI risk.",
-    class: "Musculoskeletal",
-  },
-  {
-    q: "A patient with a spinal cord injury has been on intrathecal baclofen via pump for 2 years. The pump alarm sounds and the patient reports sudden increase in muscle spasms and begins having a seizure. The nurse recognizes this as:",
-    options: ["Expected worsening of the underlying spinal cord injury", "Baclofen toxicity from pump overdose", "Baclofen withdrawal from pump failure — a medical emergency", "An unrelated new-onset seizure disorder"],
-    answer: 2,
-    explanation: "Abrupt baclofen discontinuation — especially from intrathecal pump failure — causes life-threatening withdrawal: rebound severe spasticity, hyperthermia, altered mental status, and seizures. This is a medical emergency requiring immediate intervention. Baclofen toxicity (overdose) presents with CNS/respiratory depression, not seizures from spasticity.",
-    class: "Musculoskeletal",
-  },
-  {
-    q: "A patient with gout asks when they should start taking allopurinol. They are currently having a gout flare. The nurse correctly responds:",
-    options: ["'Start allopurinol immediately — it will shorten the current attack'", "'Wait until the acute attack fully resolves (2–4 weeks) before starting allopurinol'", "'Take a double dose now to bring uric acid levels down faster'", "'Allopurinol is only used for kidney stones, not gout prevention'"],
-    answer: 1,
-    explanation: "Allopurinol should NOT be started during an acute gout attack. Rapid lowering of uric acid levels mobilizes urate crystals from deposits, which can paradoxically worsen or prolong the flare. Wait until the attack fully resolves (typically 2–4 weeks) before initiating. Colchicine or NSAIDs are used to treat the acute attack.",
-    class: "Musculoskeletal",
-  },
-  {
-    q: "A nurse is preparing to administer weekly methotrexate to a patient with rheumatoid arthritis. The order reads 'methotrexate 15mg daily.' What is the nurse's priority action?",
-    options: ["Administer the medication as ordered since the dose is within normal range", "Hold the medication and clarify the order — methotrexate for RA is given weekly, not daily", "Reduce the dose by half and administer daily as a compromise", "Administer the medication and notify the provider after administration"],
-    answer: 1,
-    explanation: "This is a HIGH-ALERT medication error. Methotrexate for rheumatoid arthritis is dosed WEEKLY — daily dosing causes fatal bone marrow suppression and mucositis. The nurse must HOLD the medication and clarify with the prescriber before administering. This is one of the most dangerous and documented prescribing errors in rheumatology.",
-    class: "Musculoskeletal",
-  },
-  {
-    q: "A patient with acute gout is given colchicine and develops severe diarrhea and nausea after the second dose. What is the most appropriate nursing response?",
-    options: ["Administer an antiemetic and continue colchicine as scheduled", "Recognize these as dose-limiting side effects and notify the provider to reduce or hold the dose", "Encourage the patient to push fluids and continue therapy", "Administer loperamide and continue colchicine at the same dose"],
-    answer: 1,
-    explanation: "GI symptoms (diarrhea, nausea, vomiting) are the primary dose-limiting toxicity of colchicine and indicate the maximum tolerable dose has been reached. The dose should be reduced or held and the provider notified. Continuing full-dose colchicine despite GI toxicity can progress to bone marrow suppression and multi-organ failure.",
-    class: "Musculoskeletal",
-  },
-
-  // ── ACE INHIBITORS ──
-  {
-    q: "A patient newly started on lisinopril develops a persistent dry cough 2 weeks into therapy. The nurse's best response is:",
-    options: ["Advise the patient this is a sign of a serious allergic reaction and to stop the medication immediately", "Explain that dry cough is a common side effect caused by bradykinin accumulation and notify the provider to consider switching to an ARB", "Tell the patient to take an antihistamine to suppress the cough and continue the medication", "Document the cough and reassure the patient it will resolve within a few days"],
-    answer: 1,
-    explanation: "Dry cough is the most common side effect of ACE inhibitors (10–15% of patients), caused by bradykinin accumulation — NOT an allergy. The provider should be notified; switching to an ARB (e.g., losartan) provides the same cardiac benefits without the cough. Antihistamines do not treat bradykinin-mediated cough.",
-    class: "ACE Inhibitors · -pril",
-  },
-  {
-    q: "A patient on lisinopril calls the clinic reporting sudden swelling of the lips and tongue that began 30 minutes ago. She has no known allergies. What is the priority action?",
-    options: ["Advise the patient to take diphenhydramine and monitor at home", "Instruct the patient to call 911 immediately — this is angioedema, a medical emergency", "Tell the patient to hold the next dose and come in for an appointment tomorrow", "Reassure the patient that mild facial swelling is a known side effect of ACE inhibitors"],
-    answer: 1,
-    explanation: "Angioedema is a rare but life-threatening side effect of ACE inhibitors that can cause airway obstruction. It can occur at any time, even years after starting the medication. It is most common in Black patients. This is a 911 emergency — airway must be secured immediately. ACE inhibitors are permanently contraindicated after angioedema.",
-    class: "ACE Inhibitors · -pril",
-  },
-
-  // ── ARBs ──
-  {
-    q: "A patient asks why her provider switched her from lisinopril to losartan. The nurse's best explanation is:",
-    options: ["'Losartan is stronger and more effective at lowering blood pressure than lisinopril.'", "'Losartan works differently — it blocks the receptor instead of the enzyme, so it gives the same benefits without causing a dry cough.'", "'Losartan is safer in pregnancy, so your provider is being cautious.'", "'ACE inhibitors are only short-term medications; ARBs are meant for long-term use.'"],
-    answer: 1,
-    explanation: "ARBs block the AT1 receptor directly rather than inhibiting ACE, so bradykinin does not accumulate — meaning no cough. They provide equivalent cardiovascular benefits. Both ACE inhibitors and ARBs are contraindicated in pregnancy. Neither is inherently stronger than the other for most indications.",
-    class: "ARBs · -sartan",
-  },
-  {
-    q: "Which combination is CONTRAINDICATED and should never be prescribed together?",
-    options: ["Lisinopril + furosemide", "Losartan + metoprolol", "Lisinopril + losartan (dual RAAS blockade)", "Valsartan + amlodipine"],
-    answer: 2,
-    explanation: "Combining an ACE inhibitor with an ARB (dual RAAS blockade) was once thought beneficial but clinical trials showed it significantly increases risk of hypotension, hyperkalemia, and renal failure without additional benefit. This combination is now contraindicated. Lisinopril + furosemide and valsartan + amlodipine are commonly used combinations.",
-    class: "ARBs · -sartan",
-  },
-
-  // ── BETA BLOCKERS ──
-  {
-    q: "A patient with newly diagnosed heart failure is started on carvedilol. She calls 3 days later reporting dizziness when standing up. The nurse should:",
-    options: ["Instruct the patient to stop carvedilol immediately — dizziness indicates the heart failure is worsening", "Explain that orthostatic hypotension is common with carvedilol due to its alpha-blocking properties and advise rising slowly", "Tell the patient to double her fluid intake to raise blood pressure", "Reassure her that dizziness is unrelated to carvedilol and schedule a neurology referral"],
-    answer: 1,
-    explanation: "Carvedilol is both a beta and alpha blocker — the alpha-1 blockade causes vasodilation and orthostatic hypotension, especially early in therapy. Advise patients to rise slowly from sitting/lying positions, take the medication with food, and report severe symptoms. This is expected and manageable, not a reason to stop.",
-    class: "Beta Blockers · -olol",
-  },
-  {
-    q: "A patient with asthma and newly diagnosed hypertension asks the nurse if they can take propranolol prescribed by another provider. The nurse's best response is:",
-    options: ["'Yes, propranolol is a safe antihypertensive for all patients.'", "'Propranolol blocks beta-2 receptors in the lungs and can cause severe bronchospasm in asthma — notify your provider before taking it.'", "'You can take propranolol as long as you keep your rescue inhaler nearby.'", "'Propranolol is only a problem for patients with COPD, not asthma.'"],
-    answer: 1,
-    explanation: "Propranolol is a non-selective beta blocker — it blocks both β1 (cardiac) and β2 (pulmonary) receptors. Blocking β2 in the lungs causes bronchoconstriction and can trigger life-threatening bronchospasm in asthmatic patients. A cardioselective beta blocker (metoprolol, atenolol) should be used if a beta blocker is truly needed.",
-    class: "Beta Blockers · -olol",
-  },
-
-  // ── CALCIUM CHANNEL BLOCKERS ──
-  {
-    q: "A patient on verapamil for A-fib is also prescribed metoprolol by a different provider. The nurse recognizes this combination as:",
-    options: ["Safe and commonly used for rate control in A-fib", "Potentially dangerous — both drugs slow the heart and combining them can cause severe bradycardia or heart block", "Appropriate since verapamil and metoprolol work on different receptors", "Fine as long as the doses are low"],
-    answer: 1,
-    explanation: "Verapamil (non-DHP CCB) and metoprolol (beta blocker) both decrease heart rate and AV conduction. Combining them can cause life-threatening bradycardia, complete heart block, or cardiac arrest — especially IV administration. This combination is generally avoided or used with extreme caution and monitoring.",
-    class: "Calcium Channel Blockers · -dipine / -verapamil / -diltiazem",
-  },
-  {
-    q: "A patient on amlodipine for hypertension complains of ankle swelling that is worse in the evenings. The nurse explains:",
-    options: ["This is heart failure developing as a side effect of amlodipine and the drug must be stopped", "Peripheral edema is a common side effect of dihydropyridine CCBs caused by vasodilation — elevating the legs and wearing compression stockings may help", "The patient should reduce salt intake since the edema is caused by sodium retention", "Ankle swelling with amlodipine indicates kidney damage and requires immediate lab work"],
-    answer: 1,
-    explanation: "Peripheral (dependent) edema is the most common side effect of DHP calcium channel blockers like amlodipine, caused by vasodilation of arterioles without compensatory venodilation — fluid shifts into interstitial tissues. It is worse with prolonged standing and in the evening. It is NOT caused by sodium retention or heart failure; diuretics are minimally effective. Leg elevation helps.",
-    class: "Calcium Channel Blockers · -dipine / -verapamil / -diltiazem",
-  },
-
-  // ── ANTIARRHYTHMICS & NITRATES ──
-  {
-    q: "A patient takes sildenafil (Viagra) for erectile dysfunction and presents to the ED with chest pain. The nurse prepares to give sublingual nitroglycerin. What is the priority assessment before administration?",
-    options: ["Ask when he last ate a meal", "Determine when he last took sildenafil — nitroglycerin is absolutely contraindicated with PDE-5 inhibitors", "Check his oxygen saturation before giving any cardiac medications", "Assess whether the chest pain is crushing or pressure-like"],
-    answer: 1,
-    explanation: "Nitroglycerin combined with PDE-5 inhibitors (sildenafil/Viagra, tadalafil/Cialis, vardenafil/Levitra) causes profound, potentially fatal hypotension. This is an absolute contraindication. If the patient took a PDE-5 inhibitor within 24–48 hours (tadalafil up to 48 hrs), nitroglycerin must be withheld and alternative pain management used.",
-    class: "Antiarrhythmics & Nitrates",
-  },
-  {
-    q: "When administering adenosine IV for PSVT, the nurse pushes the drug and the patient's monitor shows a 5-second flat line before normal sinus rhythm resumes. The nurse should:",
-    options: ["Begin CPR immediately — cardiac arrest has occurred", "Call a code blue and prepare the defibrillator", "Reassure the patient — transient asystole is the expected therapeutic mechanism of adenosine", "Document the rhythm as a complication and hold future doses"],
-    answer: 2,
-    explanation: "Transient asystole (flat line for seconds) is the expected and therapeutic mechanism of adenosine — it briefly blocks AV conduction to 'reset' the reentrant circuit causing PSVT. This is not cardiac arrest. Warn the patient beforehand that they will feel chest tightness and sense of doom for a few seconds. Normal rhythm typically resumes within 10–15 seconds.",
-    class: "Antiarrhythmics & Nitrates",
-  },
-  {
-    q: "A patient on long-term amiodarone therapy reports gradually increasing shortness of breath on exertion over the past month. The nurse's priority action is:",
-    options: ["Reassure the patient that dyspnea is expected with cardiac disease and continue monitoring", "Notify the provider immediately — new exertional dyspnea in a patient on amiodarone raises concern for pulmonary toxicity", "Increase the patient's diuretic and recheck in 2 weeks", "Obtain an ECG to evaluate for new arrhythmia causing the dyspnea"],
-    answer: 1,
-    explanation: "Pulmonary toxicity (amiodarone-induced pneumonitis/pulmonary fibrosis) is the most serious and potentially fatal side effect of amiodarone. New or worsening dyspnea in a patient on amiodarone must be evaluated urgently with CXR and PFTs. Early detection is critical — the drug may need to be discontinued. Amiodarone's 40–55 day half-life means toxicity can persist even after stopping.",
-    class: "Antiarrhythmics & Nitrates",
-  },
-
-  // ── ANTICOAGULANTS ──
-  {
-    q: "A patient on warfarin for A-fib tells the nurse she has been eating large salads with spinach, kale, and broccoli every day since starting her diet. Her INR has dropped from 2.5 to 1.4. The nurse explains:",
-    options: ["She must eliminate all green vegetables from her diet while on warfarin", "Vitamin K in green vegetables competes with warfarin — she needs to maintain CONSISTENT intake, not eliminate vegetables", "The low INR means warfarin is not working and she needs a higher dose regardless of diet", "Green vegetables have no effect on warfarin and another cause must be investigated"],
-    answer: 1,
-    explanation: "Warfarin inhibits Vitamin K-dependent clotting factors. A sudden increase in dietary Vitamin K (dark leafy greens) competes with warfarin and lowers INR. The key teaching is CONSISTENCY — not elimination. If intake is consistent, the dose can be adjusted accordingly. Eliminating vegetables then reintroducing them causes dangerous INR swings.",
-    class: "Anticoagulants",
-  },
-  {
-    q: "A patient is receiving a heparin infusion for DVT treatment. The aPTT comes back at 35 seconds (therapeutic range 60–100 seconds). The nurse should anticipate:",
-    options: ["Decreasing the heparin infusion rate — the patient is at risk for bleeding", "Increasing the heparin infusion rate — the aPTT is subtherapeutic and the patient is not adequately anticoagulated", "Stopping the heparin infusion and switching to oral warfarin", "No change — an aPTT of 35 seconds is within normal limits for heparin therapy"],
-    answer: 1,
-    explanation: "A therapeutic aPTT for heparin is 60–100 seconds (approximately 1.5–2.5x normal of ~25–35 sec). An aPTT of 35 seconds is subtherapeutic — the patient is not adequately anticoagulated and remains at risk for clot extension or new clots. The infusion rate should be increased per the heparin protocol.",
-    class: "Anticoagulants",
-  },
-
-  // ── DIURETICS ──
-  {
-    q: "A patient with heart failure is prescribed both furosemide and digoxin. The nurse's priority monitoring parameter is:",
-    options: ["Blood pressure — furosemide can cause dangerous hypotension with digoxin", "Serum potassium — furosemide causes hypokalemia which dramatically increases digoxin toxicity risk", "Urine output — the combination can cause urinary retention", "Blood glucose — furosemide can cause hyperglycemia that affects digoxin metabolism"],
-    answer: 1,
-    explanation: "Furosemide causes potassium wasting (hypokalemia). Hypokalemia dramatically increases the risk of digoxin toxicity by enhancing digoxin binding to Na/K-ATPase. This is one of the most important and tested drug interactions in nursing pharmacology. Potassium levels must be monitored closely and supplemented as needed.",
-    class: "Diuretics",
-  },
-  {
-    q: "A patient on furosemide reports ringing in both ears (tinnitus) after receiving a large IV dose. The nurse recognizes this as:",
-    options: ["An anxiety reaction from the IV administration", "Ototoxicity — a dose-related side effect of loop diuretics that requires immediate provider notification", "Normal sensory changes expected with diuretic therapy", "A sign of hyponatremia caused by fluid shifts"],
-    answer: 1,
-    explanation: "Ototoxicity (tinnitus, hearing loss) is a dose-related side effect of loop diuretics like furosemide, especially with high-dose IV administration or when combined with other ototoxic drugs (aminoglycosides, vancomycin). It can be irreversible. The provider must be notified immediately and the dose re-evaluated.",
-    class: "Diuretics",
-  },
-
-  // ── ANTIBIOTICS ──
-  {
-    q: "A patient is prescribed ciprofloxacin for a UTI. She also takes calcium supplements. The nurse's instructions should include:",
-    options: ["Take the ciprofloxacin and calcium at the same time for convenience", "Separate ciprofloxacin from calcium by at least 2 hours — calcium binds the antibiotic and reduces absorption significantly", "Stop calcium supplements for the duration of antibiotic therapy", "Take ciprofloxacin with milk to reduce GI side effects"],
-    answer: 1,
-    explanation: "Ciprofloxacin (and all fluoroquinolones) chelate divalent cations — calcium, magnesium, iron, aluminum, zinc. Taking them together reduces antibiotic absorption by up to 50–90%, potentially causing treatment failure. Separate by at least 2 hours before or 6 hours after these products. Milk also contains calcium and should be avoided at the time of dosing.",
-    class: "Antibiotics",
-  },
-  {
-    q: "A patient on ciprofloxacin for a respiratory infection calls to report sudden sharp pain in his Achilles tendon. He is 62 years old and also takes prednisone. The nurse should:",
-    options: ["Advise the patient to apply ice and continue the antibiotic as prescribed", "Instruct the patient to stop weight-bearing on the affected leg, stop ciprofloxacin, and seek immediate evaluation — tendon rupture is a serious risk", "Tell the patient tendon pain is a minor side effect and to take ibuprofen and continue the medication", "Recommend physical therapy for Achilles tendinopathy"],
-    answer: 1,
-    explanation: "Fluoroquinolones carry a BLACK BOX WARNING for tendinitis and tendon rupture, especially in patients >60, on corticosteroids, or with renal/transplant history. Achilles tendon pain in this patient is a red flag — he should stop weight-bearing, discontinue ciprofloxacin, and be evaluated immediately. Ibuprofen does not address the underlying tendon damage risk.",
-    class: "Antibiotics",
-  },
-
-  // ── PAIN & OPIOIDS ──
-  {
-    q: "A nurse is preparing to give a patient acetaminophen 1,000mg for pain. On reviewing the MAR, she notices the patient also received Percocet (oxycodone/acetaminophen 5/325mg) two doses ago. What is the priority concern?",
-    options: ["Opioid toxicity from the oxycodone component", "Acetaminophen toxicity — the patient may exceed the maximum daily dose due to hidden acetaminophen in combination products", "Drug interaction between oxycodone and acetaminophen", "Renal toxicity from NSAIDs"],
-    answer: 1,
-    explanation: "Percocet contains 325mg of acetaminophen per tablet. If the patient received two doses, they already have 650mg from Percocet. Adding 1,000mg = 1,650mg for just those doses. The maximum daily dose is 4g/day (2g in elderly/liver disease). Nurses must always calculate total acetaminophen from ALL sources — combination products are the #1 source of hidden acetaminophen overdose.",
-    class: "Pain & Opioids",
-  },
-  {
-    q: "A post-operative patient asks for ketorolac (Toradol) for pain but their chart shows they had a CABG 5 days ago. The nurse should:",
-    options: ["Administer the ketorolac — it is a non-opioid and safer than morphine post-cardiac surgery", "Hold ketorolac and notify the provider — NSAIDs are contraindicated perioperatively for CABG patients", "Give half the ordered dose to reduce cardiovascular risk", "Administer the ketorolac and monitor for bleeding"],
-    answer: 1,
-    explanation: "Ketorolac (an NSAID) is contraindicated for perioperative pain in CABG patients due to increased risk of cardiovascular events, bleeding, and renal impairment. NSAIDs inhibit prostaglandins needed for vascular homeostasis post-cardiac surgery. The prescribing error must be caught before administration — hold and notify the provider.",
-    class: "Pain & Opioids",
-  },
-
-  // ── PSYCH MEDS ──
-  {
-    q: "A patient on haloperidol develops sudden involuntary twisting of the neck and upward deviation of the eyes 2 hours after their first dose. The nurse recognizes this as:",
-    options: ["A seizure requiring immediate anticonvulsant therapy", "Acute dystonia — an extrapyramidal side effect treatable with benztropine or diphenhydramine", "Neuroleptic Malignant Syndrome requiring immediate ICU transfer", "Tardive dyskinesia from long-term antipsychotic use"],
-    answer: 1,
-    explanation: "Acute dystonia (involuntary muscle spasms — torticollis, oculogyric crisis) is an acute EPS that occurs within hours to days of starting a typical antipsychotic like haloperidol. It is treated with anticholinergics (benztropine IM/IV) or diphenhydramine. It is NOT tardive dyskinesia (which develops after months/years) and NOT NMS (which involves hyperthermia, rigidity, and altered LOC).",
-    class: "Psych Meds",
-  },
-  {
-    q: "A nurse is teaching a patient newly started on sertraline for depression. Which statement about the medication timeline is most accurate?",
-    options: ["'You should feel better within 24–48 hours of starting sertraline.'", "'Sertraline works immediately to boost serotonin levels and improve mood.'", "'It typically takes 2–6 weeks to experience the full antidepressant effect — do not stop if you feel no change in the first week.'", "'If sertraline doesn't work within 3 days, it is not the right medication for you.'"],
-    answer: 2,
-    explanation: "SSRIs like sertraline require 2–6 weeks to achieve full therapeutic antidepressant effect due to the time needed for neuroadaptation (receptor downregulation). Patients often feel no improvement or even increased anxiety in the first 1–2 weeks — this is normal and critical patient teaching. Abrupt discontinuation during this window is common and dangerous (relapse risk + discontinuation syndrome).",
-    class: "Psych Meds",
-  },
-  {
-    q: "A patient on lorazepam for anxiety has been taking it daily for 6 months. The provider wants to discontinue it. The nurse knows the safest approach is to:",
-    options: ["Stop lorazepam immediately since it has been prescribed by a physician", "Taper the dose gradually over weeks — abrupt discontinuation of long-term benzodiazepines can cause life-threatening seizures", "Switch immediately to an SSRI with no taper needed", "Reduce the dose by half for one day then stop completely"],
-    answer: 1,
-    explanation: "Abrupt discontinuation of benzodiazepines in physically dependent patients can cause withdrawal seizures, which can be fatal. Long-term use (even at therapeutic doses) causes physical dependence. Tapering must be done gradually — often over weeks to months depending on the dose and duration. This is one of the most dangerous medication errors involving benzodiazepines.",
-    class: "Psych Meds",
-  },
-
-  // ── ENDOCRINE ──
-  {
-    q: "A nurse is preparing to give insulin glargine (Lantus) and notices another nurse is mixing it with regular insulin in the same syringe to save time. The nurse should:",
-    options: ["Allow it if both insulins are clear", "Intervene immediately — insulin glargine must NEVER be mixed with any other insulin", "Allow it since both are long-acting insulins", "Check with pharmacy before intervening"],
-    answer: 1,
-    explanation: "Insulin glargine (Lantus) has a pH of 4 and works by precipitating at neutral tissue pH to form a depot for slow absorption. Mixing it with another insulin changes the pH, disrupts the precipitation mechanism, and alters both insulins' pharmacokinetics unpredictably. Glargine must always be given as a separate injection.",
-    class: "Endocrine",
-  },
-  {
-    q: "A patient is being discharged on levothyroxine. Which instruction is most critical for the nurse to include?",
-    options: ["'Take levothyroxine with breakfast to improve absorption.'", "'Take levothyroxine on an empty stomach 30–60 minutes before breakfast with water only, and separate from calcium, iron, and antacids by 4 hours.'", "'You can take levothyroxine at any time of day as long as it is consistent.'", "'Take levothyroxine with a high-protein meal for best absorption.'"],
-    answer: 1,
-    explanation: "Levothyroxine absorption is significantly reduced by food and many medications. It must be taken on an empty stomach with water only, 30–60 minutes before the first meal. Calcium, iron supplements, antacids, and cholestyramine reduce absorption by binding the drug — separate by at least 4 hours. TSH takes 4–6 weeks to stabilize after dose changes.",
-    class: "Endocrine",
-  },
-
-  // ── RESPIRATORY ──
-  {
-    q: "A patient using a fluticasone/salmeterol (Advair) inhaler calls reporting white patches in her mouth and sore throat. The nurse recognizes this as:",
-    options: ["An allergic reaction to the inhaler propellant requiring epinephrine", "Oral candidiasis (thrush) — a common side effect of inhaled corticosteroids preventable by rinsing the mouth after each use", "Strep throat unrelated to the inhaler", "Angioedema requiring immediate discontinuation of the inhaler"],
-    answer: 1,
-    explanation: "Oral candidiasis (thrush — Candida overgrowth) is a common side effect of inhaled corticosteroids (ICS) caused by local immunosuppression from deposited steroid in the oropharynx. It is prevented by rinsing the mouth and gargling with water after EVERY use and spitting it out. Using a spacer device also reduces oropharyngeal deposition. Treat with antifungal (nystatin or fluconazole).",
-    class: "Respiratory",
-  },
-  {
-    q: "A patient with COPD is prescribed tiotropium (Spiriva). He also has benign prostatic hypertrophy (BPH). The nurse should:",
-    options: ["Administer tiotropium without concern since it is inhaled and has no systemic effects", "Alert the provider — tiotropium's anticholinergic effects can worsen urinary retention in patients with BPH", "Hold tiotropium until urinary symptoms are fully resolved", "Switch to albuterol since it has no anticholinergic properties"],
-    answer: 1,
-    explanation: "Tiotropium is a long-acting anticholinergic (LAMA). Anticholinergic drugs block muscarinic receptors including M3 receptors in the bladder, causing urinary retention — a significant concern in patients with BPH who already have impaired bladder emptying. The provider should be alerted and the patient monitored for urinary symptoms. Tiotropium can be used cautiously but requires close monitoring.",
-    class: "Respiratory",
-  },
-
-  // ── GI DRUGS ──
-  {
-    q: "A patient is prescribed IV ondansetron for nausea. The nurse is about to administer it as a rapid IV push over 10 seconds. A colleague stops her. Why?",
-    options: ["IV ondansetron must be diluted and given orally for safety", "Rapid IV push of ondansetron can cause QT prolongation and potentially fatal arrhythmias — it must be given slowly over at least 15 minutes", "Ondansetron is only safe as an IM injection", "IV ondansetron should only be given by a physician"],
-    answer: 1,
-    explanation: "Rapid IV push of ondansetron (over <30 seconds) is associated with QT prolongation and potentially fatal cardiac arrhythmias (torsades de pointes). IV ondansetron must be diluted and infused over at least 15 minutes. This is a critical administration safety point — the FDA has issued warnings about IV ondansetron and QT prolongation.",
-    class: "GI Drugs",
-  },
-  {
-    q: "A patient with STEMI receives tenecteplase (TNKase). 90 minutes later the ST elevation resolves and the patient develops multiple PVCs on the monitor. The nurse recognizes this as:",
-    options: ["A dangerous complication requiring immediate defibrillation", "Reperfusion arrhythmias — an expected sign the thrombolytic has restored coronary blood flow", "Tenecteplase toxicity requiring reversal with aminocaproic acid", "Ventricular fibrillation requiring CPR"],
-    answer: 1,
-    explanation: "Reperfusion arrhythmias (PVCs, accelerated idioventricular rhythm) are an expected and reassuring sign that thrombolytic therapy has successfully restored coronary blood flow. They typically resolve spontaneously without treatment. This differs from ventricular fibrillation, which requires immediate defibrillation.",
-    class: "Thrombolytics",
-  },
-  {
-    q: "A patient started on ticagrelor (Brilinta) after a NSTEMI reports shortness of breath climbing stairs. O2 sat is 98% and there is no wheezing. The nurse should:",
-    options: ["Tell her to go to the ED immediately — this indicates a pulmonary embolism", "Reassure her that dyspnea is a known side effect of ticagrelor unrelated to bronchospasm — notify the provider", "Advise her to use her albuterol inhaler since ticagrelor is causing bronchospasm", "Instruct her to stop ticagrelor immediately"],
-    answer: 1,
-    explanation: "Dyspnea occurs in ~15% of patients on ticagrelor and is its most unique side effect. It is NOT bronchospasm — O2 saturation remains normal with no wheezing. The mechanism may be related to adenosine accumulation. Albuterol will not help. The provider should be notified but the medication is typically continued as benefits outweigh this side effect.",
+    type: "sata",
+    q: "A nurse is providing discharge teaching to a client newly prescribed ticagrelor (Brilinta) after an NSTEMI. Which instructions should the nurse include? SELECT ALL THAT APPLY.",
+    options: [
+      "Take the medication twice daily as prescribed",
+      "You may experience shortness of breath — this is a known side effect, not a sign of heart failure",
+      "Take aspirin 325mg daily with this medication for added protection",
+      "Do not stop this medication without consulting your cardiologist",
+      "Avoid aspirin doses greater than 100mg daily while on ticagrelor",
+      "This medication may be crushed and mixed with food if swallowing is difficult"
+    ],
+    answer: [0, 1, 3, 4],
+    explanation: "Ticagrelor: (A) is twice daily — correct. (B) Dyspnea affects ~15% of patients and is NOT bronchospasm or heart failure — correct to teach. (C) INCORRECT — high-dose aspirin (>100mg) REDUCES ticagrelor's effectiveness — contraindicated. (D) Never stop P2Y12 inhibitors abruptly post-stent — thrombosis risk. (E) Correct — aspirin must be ≤100mg/day. (F) Incorrect — ticagrelor should not be crushed without specific guidance.",
     class: "Antiplatelets",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // THROMBOLYTICS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A 58-year-old male presents to the ED with sudden onset right-sided weakness, facial droop, and aphasia that began 2 hours ago. CT scan shows no hemorrhage. BP is 168/94 mmHg. The provider orders alteplase (tPA) IV.",
+    q: "Which nursing action is the HIGHEST priority during the alteplase infusion?",
+    options: [
+      "Maintain BP below 185/110 mmHg and monitor neurological status every 15 minutes",
+      "Administer aspirin 325mg concurrently to prevent re-occlusion",
+      "Insert a urinary catheter immediately to monitor urine output",
+      "Prepare the client for emergent surgical embolectomy as a backup"
+    ],
+    answer: 0,
+    explanation: "During tPA infusion for ischemic stroke: BP must be maintained <185/110 mmHg (hypertension increases hemorrhagic conversion risk). Neurological checks every 15 minutes are mandatory to detect intracranial hemorrhage early. Antiplatelet agents (aspirin) are CONTRAINDICATED for 24 hours post-tPA. Urinary catheterization is a secondary concern. TIME IS BRAIN — the priority is safe tPA administration.",
+    class: "Thrombolytics",
+    nclex_category: "Pharmacological Therapies",
   },
   {
-    q: "A patient on long-term omeprazole reports muscle cramps and tingling in his hands. Labs show magnesium of 1.2 mEq/L (normal 1.5–2.5 mEq/L). The nurse connects this finding to:",
-    options: ["The GERD itself causing electrolyte loss through frequent vomiting", "Hypomagnesemia — a known complication of long-term PPI use requiring supplementation and provider notification", "A dietary deficiency completely unrelated to his medications", "Omeprazole causing renal wasting of magnesium through nephrotoxicity"],
+    type: "standard",
+    q: "Twenty minutes after completing a tPA infusion for ischemic stroke, a client develops sudden severe headache, vomiting, and a blood pressure of 195/112 mmHg. The nurse's PRIORITY action is:",
+    options: [
+      "Administer a PRN antihypertensive medication per standing orders",
+      "Stop any remaining tPA infusion, notify the provider immediately, and prepare for emergent CT scan",
+      "Reposition the client to prevent aspiration and continue monitoring",
+      "Administer aminocaproic acid (Amicar) to reverse tPA effects"
+    ],
     answer: 1,
-    explanation: "Long-term PPI use (>1 year) can cause hypomagnesemia by impairing intestinal magnesium absorption. Severe cases cause tetany, seizures, and cardiac arrhythmias. The FDA issued a safety warning about this in 2011. Magnesium should be monitored in patients on chronic PPI therapy, and switching to an H2 blocker may be necessary.",
+    explanation: "Sudden severe headache + vomiting + hypertension after tPA = INTRACRANIAL HEMORRHAGE until proven otherwise. This is the most feared complication of tPA. Priority: stop infusion → notify provider → emergent CT scan. Aminocaproic acid may be used for tPA-related bleeding but the FIRST action is stopping infusion and getting imaging. Repositioning alone is dangerously inadequate.",
+    class: "Thrombolytics",
+    nclex_category: "Safety and Infection Control",
+  },
+
+  // ══════════════════════════════════════════════
+  // ACE INHIBITORS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A 52-year-old male with hypertension and type 2 diabetes mellitus has been taking lisinopril 10mg daily for 6 months. At today's follow-up, his serum creatinine has risen from 0.9 to 1.3 mg/dL and potassium is 5.3 mEq/L. He reports a persistent dry cough that began 3 weeks ago.",
+    q: "The nurse correctly interprets these findings as:",
+    options: [
+      "Signs of lisinopril toxicity requiring immediate discontinuation and dialysis",
+      "Expected pharmacological effects of ACE inhibition — mild creatinine rise and hyperkalemia are acceptable; cough is a class effect requiring provider notification",
+      "Evidence of worsening diabetic nephropathy unrelated to lisinopril",
+      "Signs of a serious allergic reaction requiring epinephrine administration"
+    ],
+    answer: 1,
+    explanation: "ACE inhibitors cause: (1) mild creatinine rise (10–30% is acceptable — reflects reduced glomerular hyperfiltration, which is actually renoprotective long-term); (2) hyperkalemia (reduced aldosterone → K+ retention); (3) dry cough in 10–15% of patients (bradykinin accumulation). None of these findings require emergency intervention, but the provider should be notified about the K+ level and cough. If K+ rises above 5.5 or cough is intolerable, drug change may be needed.",
+    class: "ACE Inhibitors · -pril",
+    nclex_category: "Pharmacological Therapies",
+  },
+  {
+    type: "priority",
+    q: "A client taking lisinopril calls the clinic reporting swelling of the lips and tongue that began 30 minutes ago. He has mild difficulty swallowing but can speak. Which instruction should the nurse give FIRST?",
+    options: [
+      "Take diphenhydramine 50mg immediately and come to the clinic in 2 hours",
+      "Call 911 immediately — this is angioedema and can progress to airway obstruction",
+      "Stop taking lisinopril and schedule a follow-up appointment tomorrow",
+      "Take an antacid and monitor the swelling — it will likely resolve on its own"
+    ],
+    answer: 1,
+    explanation: "ACE inhibitor-induced angioedema is a MEDICAL EMERGENCY. Oropharyngeal swelling can rapidly progress to complete airway obstruction and death. Even though the client can currently speak, airway compromise can occur within minutes. Call 911 FIRST. Diphenhydramine does NOT effectively treat bradykinin-mediated angioedema (unlike histamine-mediated allergic reactions). Lisinopril is permanently contraindicated after this event.",
+    class: "ACE Inhibitors · -pril",
+    nclex_category: "Safety and Infection Control",
+  },
+
+  // ══════════════════════════════════════════════
+  // ARBs
+  // ══════════════════════════════════════════════
+  {
+    type: "standard",
+    q: "A provider prescribes losartan for a client who previously experienced intolerable cough on lisinopril. The client asks why the new medication won't cause cough. The nurse's BEST explanation is:",
+    options: [
+      "Losartan is a weaker medication so it has fewer side effects overall",
+      "Losartan blocks the angiotensin II receptor directly without inhibiting ACE, so bradykinin does not accumulate — eliminating the cough mechanism",
+      "Losartan is processed differently by the kidneys so cough is impossible",
+      "The cough from lisinopril was likely unrelated to the medication"
+    ],
+    answer: 1,
+    explanation: "ACE inhibitors block ACE → bradykinin accumulates → cough. ARBs like losartan bypass ACE entirely and block the AT1 receptor directly. Since ACE is not inhibited, bradykinin levels remain normal → no cough. ARBs provide equivalent cardiovascular and renal protection to ACE inhibitors without this side effect. Same pregnancy contraindication applies.",
+    class: "ARBs · -sartan",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // BETA BLOCKERS
+  // ══════════════════════════════════════════════
+  {
+    type: "sata",
+    q: "A nurse is preparing to administer metoprolol succinate 50mg to a client with heart failure. Which assessments should the nurse complete BEFORE administration? SELECT ALL THAT APPLY.",
+    options: [
+      "Apical heart rate for one full minute",
+      "Blood pressure",
+      "Blood glucose level",
+      "Respiratory status — assess for wheezing or bronchospasm",
+      "Serum potassium level",
+      "Temperature"
+    ],
+    answer: [0, 1, 2, 3],
+    explanation: "Before metoprolol: (A) Apical HR — hold if <60 bpm. (B) BP — hold if systolic <90 mmHg. (C) Blood glucose — beta blockers mask tachycardia (but not diaphoresis) of hypoglycemia; baseline glucose important in diabetic patients. (D) Respiratory — metoprolol is β1-selective but can cause bronchospasm at higher doses; assess baseline. (E) Potassium is not a standard pre-administration check for metoprolol. (F) Temperature is not relevant here.",
+    class: "Beta Blockers · -olol",
+    nclex_category: "Pharmacological Therapies",
+  },
+  {
+    type: "vignette",
+    vignette: "A client with chronic obstructive pulmonary disease (COPD) and newly diagnosed hypertension is seen in the cardiology clinic. The cardiologist prescribes propranolol 40mg twice daily. The client's current medications include albuterol inhaler PRN and tiotropium daily.",
+    q: "The nurse should question this order because:",
+    options: [
+      "Propranolol and albuterol have additive bronchodilation effects that could cause tachycardia",
+      "Propranolol is a non-selective beta blocker that blocks β2 receptors in the lungs, which can cause severe bronchospasm in COPD clients",
+      "Propranolol is contraindicated with tiotropium due to additive anticholinergic effects",
+      "Propranolol requires dose adjustment in COPD due to altered drug metabolism"
+    ],
+    answer: 1,
+    explanation: "Propranolol blocks BOTH β1 (cardiac) and β2 (pulmonary) receptors. In COPD, bronchial smooth muscle relies on β2 stimulation to maintain airway patency. Blocking β2 → bronchoconstriction → potentially fatal bronchospasm. A cardioselective β1 blocker (metoprolol, atenolol, bisoprolol) should be used if a beta blocker is truly necessary in COPD. The nurse has a professional obligation to question this order.",
+    class: "Beta Blockers · -olol",
+    nclex_category: "Safety and Infection Control",
+  },
+
+  // ══════════════════════════════════════════════
+  // CALCIUM CHANNEL BLOCKERS
+  // ══════════════════════════════════════════════
+  {
+    type: "standard",
+    q: "A client receiving IV diltiazem for atrial fibrillation with rapid ventricular response is also prescribed metoprolol by a covering provider. The nurse should:",
+    options: [
+      "Administer both medications as ordered since they target different receptors",
+      "Hold both medications and wait for the client's heart rate to normalize spontaneously",
+      "Hold the metoprolol and contact the provider — concurrent IV diltiazem and beta blocker can cause life-threatening bradycardia and heart block",
+      "Administer the metoprolol first, then the diltiazem 30 minutes later to prevent interaction"
+    ],
+    answer: 2,
+    explanation: "Diltiazem (non-DHP CCB) slows AV conduction and decreases HR. Metoprolol (beta blocker) also slows AV conduction and HR. Combining these — especially IV — creates ADDITIVE negative chronotropy and dromotropy, risking complete heart block and cardiac arrest. The nurse must hold the metoprolol and contact the provider immediately. This is a high-stakes medication safety scenario frequently tested on NCLEX.",
+    class: "Calcium Channel Blockers · -dipine / -verapamil / -diltiazem",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is teaching a client newly prescribed amlodipine for hypertension. Which statements should the nurse include in teaching? SELECT ALL THAT APPLY.",
+    options: [
+      "You may notice ankle swelling — this is a common side effect caused by vasodilation",
+      "Avoid drinking grapefruit juice as it can increase amlodipine levels",
+      "Take this medication with food to prevent GI upset",
+      "This medication will also control your heart rate if it becomes elevated",
+      "Do not stop this medication abruptly without consulting your provider",
+      "Headache and flushing may occur, especially when first starting"
+    ],
+    answer: [0, 1, 4, 5],
+    explanation: "(A) Peripheral edema is the most common side effect of DHP CCBs — caused by arteriolar vasodilation. Teach leg elevation. (B) Grapefruit inhibits CYP3A4 → increased amlodipine levels — avoid. (C) Food is not required for amlodipine. (D) INCORRECT — amlodipine is a DHP CCB (vascular selective) and has minimal effect on heart rate. (E) Abrupt discontinuation can cause rebound hypertension. (F) Headache and flushing from vasodilation are common initially.",
+    class: "Calcium Channel Blockers · -dipine / -verapamil / -diltiazem",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // ANTIARRHYTHMICS & NITRATES
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client with heart failure and atrial fibrillation has been taking amiodarone 200mg daily for 18 months. At today's appointment, he reports a new dry cough and progressive shortness of breath on exertion over the past 6 weeks. Lung auscultation reveals bilateral fine crackles. His thyroid stimulating hormone (TSH) is elevated at 8.2 mIU/L.",
+    q: "The nurse correctly identifies which TWO findings as potential amiodarone toxicity?",
+    options: [
+      "Pulmonary toxicity (amiodarone-induced pneumonitis) and hypothyroidism",
+      "Renal toxicity and hyperthyroidism",
+      "Hepatotoxicity and hyperkalemia",
+      "Cardiac toxicity and adrenal insufficiency"
+    ],
+    answer: 0,
+    explanation: "Amiodarone is 37% iodine by weight and causes multi-organ toxicity. This client shows: (1) Pulmonary toxicity — progressive dyspnea + bilateral crackles = amiodarone pneumonitis (most serious, can be fatal); (2) Hypothyroidism — elevated TSH (amiodarone's iodine load can cause either hypo OR hyperthyroidism). Both require immediate provider notification. Amiodarone's half-life of 40–55 days means toxicity can persist for months after stopping.",
+    class: "Antiarrhythmics & Nitrates",
+    nclex_category: "Pharmacological Therapies",
+  },
+  {
+    type: "priority",
+    q: "A client with chest pain is prescribed sublingual nitroglycerin. Before administering, the nurse reviews the client's medication list. Which finding requires the nurse to WITHHOLD nitroglycerin and notify the provider?",
+    options: [
+      "The client takes metoprolol 25mg daily",
+      "The client took sildenafil (Viagra) 20 hours ago",
+      "The client's blood pressure is 142/88 mmHg",
+      "The client took aspirin 81mg this morning"
+    ],
+    answer: 1,
+    explanation: "Sildenafil (Viagra), tadalafil (Cialis), and vardenafil (Levitra) are PDE-5 inhibitors that potentiate nitric oxide → profound vasodilation. Combined with nitroglycerin (which also works via NO), the result can be severe, refractory hypotension and death. Sildenafil: nitroglycerin contraindicated for 24 hours. Tadalafil: 48 hours. This is an ABSOLUTE contraindication. The other findings do not contraindicate nitroglycerin.",
+    class: "Antiarrhythmics & Nitrates",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "standard",
+    q: "A nurse administers adenosine 6mg rapid IV push for a client in paroxysmal supraventricular tachycardia (PSVT). The cardiac monitor briefly shows a flat line (asystole) for 6 seconds before normal sinus rhythm resumes. The nurse should:",
+    options: [
+      "Begin CPR immediately — asystole indicates cardiac arrest",
+      "Administer a second dose of adenosine — the first dose was ineffective",
+      "Document the finding as the expected therapeutic response to adenosine and continue monitoring",
+      "Call a rapid response team — the client has experienced a life-threatening complication"
+    ],
+    answer: 2,
+    explanation: "Transient asystole (flat line lasting seconds) is the EXPECTED, THERAPEUTIC mechanism of adenosine. By transiently blocking AV node conduction, adenosine 'resets' the reentrant circuit causing PSVT. Normal rhythm typically resumes within 10–15 seconds. The nurse should warn the client beforehand about the expected chest tightness and 'doom' sensation. This is NOT cardiac arrest. No CPR or rapid response is needed.",
+    class: "Antiarrhythmics & Nitrates",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // DIURETICS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client with heart failure is prescribed both furosemide 40mg IV daily and digoxin 0.125mg daily. This morning's labs show: Sodium 138 mEq/L, Potassium 3.1 mEq/L, Magnesium 1.6 mEq/L, Digoxin level 1.8 ng/mL. The client reports nausea, loss of appetite, and seeing yellow-green halos around lights.",
+    q: "The nurse's PRIORITY action is to:",
+    options: [
+      "Administer both medications as scheduled since the digoxin level is within therapeutic range",
+      "Hold the furosemide only and administer digoxin as the level is therapeutic",
+      "Hold both medications, notify the provider immediately — the client is showing signs of digoxin toxicity potentiated by hypokalemia",
+      "Administer potassium supplementation and then give both medications"
+    ],
+    answer: 2,
+    explanation: "Despite a 'therapeutic' digoxin level of 1.8 ng/mL, HYPOKALEMIA (K+ 3.1) dramatically enhances digoxin binding to Na/K-ATPase → TOXICITY occurs at therapeutic levels. Visual disturbances (yellow-green halos) + GI symptoms (nausea, anorexia) = classic digoxin toxicity. HOLD BOTH medications, notify provider IMMEDIATELY. The antidote is Digoxin Immune Fab (Digibind). This is a critical NCLEX safety scenario — toxicity can occur within 'normal' drug levels when electrolytes are abnormal.",
+    class: "Diuretics",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is caring for a client receiving furosemide IV for acute pulmonary edema. Which assessments are MOST important to monitor? SELECT ALL THAT APPLY.",
+    options: [
+      "Urine output hourly",
+      "Serum potassium level",
+      "Daily weight",
+      "Hearing acuity",
+      "Blood glucose",
+      "Lung sounds"
+    ],
+    answer: [0, 1, 2, 3, 5],
+    explanation: "(A) Hourly urine output — furosemide should produce rapid diuresis; inadequate output may indicate renal failure or fluid shifts. (B) Potassium — furosemide is potassium-WASTING; hypokalemia can cause life-threatening dysrhythmias. (C) Daily weight — most accurate measure of fluid status (1 kg = ~1 liter fluid). (D) Hearing — high-dose IV furosemide causes ototoxicity (irreversible tinnitus/hearing loss). (E) Blood glucose — not a priority for furosemide. (F) Lung sounds — assess response to treatment (crackles should diminish with diuresis).",
+    class: "Diuretics",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // ANTIBIOTICS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client is receiving vancomycin 1250mg IV over 60 minutes for MRSA bacteremia. After 20 minutes of infusion, the client reports sudden flushing, pruritus, and erythema across the face, neck, and upper chest. BP is 98/60 mmHg. The client denies throat tightness or difficulty breathing.",
+    q: "The nurse's BEST initial action is:",
+    options: [
+      "Stop the infusion permanently and document a vancomycin allergy",
+      "Stop or slow the infusion rate and administer diphenhydramine as ordered — this is Red Man Syndrome, not anaphylaxis",
+      "Administer epinephrine 0.3mg IM — this presentation indicates anaphylaxis",
+      "Continue the infusion at the current rate and apply cool compresses for comfort"
+    ],
+    answer: 1,
+    explanation: "Red Man Syndrome is a RATE-RELATED infusion reaction (NOT a true IgE-mediated allergy) caused by direct mast cell degranulation from vancomycin. It is NOT anaphylaxis. Key differences: no bronchospasm, no urticaria, no throat closure. Management: slow or stop infusion + diphenhydramine. Vancomycin is NOT permanently contraindicated — can resume at slower rate. Epinephrine is for true anaphylaxis with airway compromise.",
+    class: "Antibiotics",
+    nclex_category: "Pharmacological Therapies",
+  },
+  {
+    type: "sata",
+    q: "A nurse is reviewing discharge instructions for a client completing a course of ciprofloxacin for a urinary tract infection. Which instructions should the nurse include? SELECT ALL THAT APPLY.",
+    options: [
+      "Separate ciprofloxacin from antacids, calcium supplements, and iron by at least 2 hours",
+      "Report any tendon pain, especially in the Achilles — stop the medication and seek evaluation immediately",
+      "Take the medication with a full glass of milk for best absorption",
+      "Avoid prolonged sun exposure and use sunscreen while on this medication",
+      "This medication is safe to use in children under 18 for most infections",
+      "Report any numbness, tingling, or weakness in the extremities"
+    ],
+    answer: [0, 1, 3, 5],
+    explanation: "(A) Divalent cations chelate fluoroquinolones → drastically reduce absorption — separate by 2+ hours. (B) BLACK BOX WARNING: tendinitis/tendon rupture — stop immediately if tendon pain occurs. (C) INCORRECT — milk contains calcium which chelates ciprofloxacin — avoid. (D) Fluoroquinolones cause photosensitivity — sunscreen required. (E) INCORRECT — contraindicated in patients <18 due to cartilage damage risk. (F) BLACK BOX WARNING: peripheral neuropathy — may be permanent — report immediately.",
+    class: "Antibiotics",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // PAIN & OPIOIDS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A postoperative client received morphine 4mg IV 25 minutes ago for pain. The nurse performs a routine assessment and finds: respiratory rate 7 breaths/min, SpO2 88% on room air, client responds only to sternal rub, pupils are pinpoint bilaterally. Pain score is now 0.",
+    q: "The nurse's FIRST action should be:",
+    options: [
+      "Apply a nonrebreather mask at 15L/min oxygen and recheck SpO2 in 5 minutes",
+      "Notify the provider and document the assessment findings",
+      "Attempt to arouse the client and administer naloxone (Narcan) per PRN order",
+      "Position the client in high Fowler's and prepare for emergent intubation"
+    ],
+    answer: 2,
+    explanation: "This client has opioid-induced respiratory depression: RR 7 (critical — <12), SpO2 88%, unresponsive, pinpoint pupils. This is a MEDICAL EMERGENCY. FIRST action: attempt to arouse AND administer naloxone (Narcan) — the opioid antagonist that will reverse respiratory depression within 1–2 minutes. Remember: naloxone's half-life (30–90 min) is shorter than morphine's — monitor for re-narcotization and repeat doses PRN. Oxygen alone is insufficient for this level of depression.",
+    class: "Pain & Opioids",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is reviewing a postoperative client's medication administration record. The client received Percocet (oxycodone 5mg/acetaminophen 325mg) two tablets at 0800 and two tablets at 1200. The client now requests Tylenol 1000mg at 1600 for a headache. Which actions should the nurse take? SELECT ALL THAT APPLY.",
+    options: [
+      "Administer the Tylenol as requested — it is a different medication from Percocet",
+      "Calculate the total acetaminophen received from Percocet doses",
+      "Recognize that administering Tylenol 1000mg would bring the total acetaminophen to 3,300mg for the day so far",
+      "Hold the Tylenol and contact the provider to report the situation",
+      "Administer ibuprofen instead since it does not contain acetaminophen",
+      "Document that the client refused pain medication"
+    ],
+    answer: [1, 2, 3],
+    explanation: "This is a CRITICAL medication safety scenario. Percocet contains 325mg acetaminophen per tablet. Client received: 4 tablets × 325mg = 1,300mg already. Adding Tylenol 1000mg = 2,300mg total by 1600 — within daily limit BUT additional Percocet doses later could push past 4,000mg (max) or 3,000mg (elderly/liver disease). The nurse must CALCULATE total acetaminophen (B), recognize the cumulative risk (C), and notify the provider (D) before administering. Never give additional acetaminophen-containing products without accounting for all sources.",
+    class: "Pain & Opioids",
+    nclex_category: "Safety and Infection Control",
+  },
+
+  // ══════════════════════════════════════════════
+  // PSYCH MEDS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client with schizophrenia has been receiving haloperidol 5mg IM for 3 days in the inpatient psychiatric unit. The nurse is called to the client's room and finds him rigid, with a temperature of 39.8°C (103.6°F), blood pressure 168/102 mmHg, heart rate 122 bpm, diaphoresis, and severely altered mental status. The client's CK level from this morning is 4,200 U/L.",
+    q: "The nurse recognizes this presentation as:",
+    options: [
+      "Acute dystonia — treatable with benztropine IM",
+      "Serotonin syndrome — treat with cyproheptadine",
+      "Neuroleptic Malignant Syndrome (NMS) — a life-threatening emergency requiring immediate intervention",
+      "Akathisia — treat with propranolol and reduce antipsychotic dose"
+    ],
+    answer: 2,
+    explanation: "NMS is a rare but LIFE-THREATENING reaction to antipsychotics: FEVER (hyperthermia) + RIGIDITY (lead-pipe) + ALTERED MENTAL STATUS + AUTONOMIC INSTABILITY (labile BP, tachycardia, diaphoresis) + elevated CK (muscle breakdown). Management: STOP antipsychotic IMMEDIATELY, ICU transfer, dantrolene (muscle relaxant), bromocriptine (dopamine agonist), supportive care. Mortality 10–20% if untreated. MNEMONIC: 'FALTER' — Fever, Altered consciousness, Labile BP, Tremor, Elevated CK, Rigidity.",
+    class: "Psych Meds",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is teaching a client newly prescribed sertraline (Zoloft) 50mg daily for major depressive disorder. Which points should the nurse emphasize? SELECT ALL THAT APPLY.",
+    options: [
+      "Full antidepressant effect may take 2–6 weeks — do not stop if no immediate improvement",
+      "Do not take any over-the-counter cold medications containing dextromethorphan without consulting your provider",
+      "You may take this medication with MAOIs for enhanced antidepressant effect",
+      "Report increased thoughts of self-harm or suicide, especially in the first few weeks",
+      "Do not abruptly discontinue this medication — taper under provider guidance",
+      "Tramadol and other serotonergic drugs should be used cautiously with sertraline"
+    ],
+    answer: [0, 1, 3, 4, 5],
+    explanation: "(A) SSRIs take 2–6 weeks for full effect — critical teaching to prevent premature discontinuation. (B) Dextromethorphan is serotonergic — risk of serotonin syndrome with SSRIs. (C) DANGEROUS AND INCORRECT — MAOIs + SSRIs = life-threatening serotonin syndrome; 14-day washout required. (D) BLACK BOX WARNING: increased suicidality in <25 years, especially early in treatment — monitor closely. (E) Abrupt discontinuation causes discontinuation syndrome (dizziness, 'brain zaps', nausea). (F) Tramadol is serotonergic — serotonin syndrome risk.",
+    class: "Psych Meds",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // ENDOCRINE
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client with type 1 diabetes is admitted for pneumonia. The nurse prepares to administer the prescribed insulin: insulin glargine (Lantus) 22 units at bedtime and regular insulin per sliding scale. The client's blood glucose is 287 mg/dL. The sliding scale calls for 8 units of regular insulin.",
+    q: "Which action by the nurse demonstrates CORRECT insulin administration?",
+    options: [
+      "Mix the 22 units of glargine and 8 units of regular insulin in one syringe for a single injection",
+      "Administer the regular insulin first, then draw up glargine in the same syringe",
+      "Administer the regular insulin and glargine as TWO SEPARATE injections in different sites",
+      "Hold the glargine since the blood glucose is already elevated and regular insulin is being given"
+    ],
+    answer: 2,
+    explanation: "Insulin glargine (Lantus) MUST NEVER be mixed with any other insulin. Glargine has a pH of 4 — when mixed with regular insulin (pH ~7), the pH change causes precipitation and unpredictable pharmacokinetics of BOTH insulins. Always administer as SEPARATE injections at separate sites. This is one of the most commonly tested insulin safety questions on NCLEX. Glargine should also NEVER be shaken — roll gently.",
+    class: "Endocrine",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "priority",
+    q: "A nurse is caring for four clients with diabetes. Which client requires PRIORITY assessment?",
+    options: [
+      "A client on metformin whose blood glucose is 142 mg/dL before lunch",
+      "A client on insulin glargine whose fasting glucose is 118 mg/dL",
+      "A client on regular insulin who received their dose 45 minutes ago and is now diaphoretic, trembling, and confused",
+      "A client on sitagliptin whose HbA1c is 7.2%"
+    ],
+    answer: 2,
+    explanation: "Using ABC and Maslow's: diaphoresis + trembling + confusion 45 minutes after regular insulin = HYPOGLYCEMIA (Somogyi-type or insulin peak effect). Regular insulin peaks at 2–4 hours but can cause earlier hypoglycemia if the client didn't eat. Hypoglycemia can progress to seizures and death. PRIORITY: check glucose STAT, administer 15g fast-acting carbohydrate (15–15 rule) or dextrose IV if unable to swallow. The other clients have controlled or expected glucose values.",
+    class: "Endocrine",
+    nclex_category: "Safety and Infection Control",
+  },
+
+  // ══════════════════════════════════════════════
+  // RESPIRATORY
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A 34-year-old client with moderate persistent asthma uses albuterol (ProAir) inhaler 4–5 times per week for symptom relief. She uses fluticasone (Flovent) inhaled corticosteroid twice daily as prescribed. She reports her asthma is 'under control' because the albuterol always works when she needs it.",
+    q: "The nurse's BEST response to this client's statement is:",
+    options: [
+      "Agree with the client — if the rescue inhaler works, asthma is being managed effectively",
+      "Inform the client that using albuterol more than 2 days/week for symptoms indicates inadequately controlled asthma requiring a provider evaluation for step-up therapy",
+      "Tell the client to use the fluticasone as needed instead of the albuterol",
+      "Advise the client to double the fluticasone dose to eliminate albuterol use"
+    ],
+    answer: 1,
+    explanation: "Per NAEPP (National Asthma Education and Prevention Program) guidelines: rescue inhaler use >2 days/week for symptom control indicates UNCONTROLLED asthma. Albuterol treats bronchospasm but does NOT address underlying airway inflammation. This client needs provider evaluation for step-up therapy (likely increasing ICS dose or adding a LABA). Over-reliance on rescue inhalers is associated with asthma mortality. Doubling ICS without provider order is not the nurse's role.",
+    class: "Respiratory",
+    nclex_category: "Pharmacological Therapies",
+  },
+  {
+    type: "standard",
+    q: "A client with COPD who takes tiotropium (Spiriva) HandiHaler reports he swallowed the capsule by mistake instead of inhaling it. The nurse should:",
+    options: [
+      "Tell the client this is fine — the medication will be absorbed through the GI tract",
+      "Advise the client to induce vomiting immediately to prevent systemic absorption",
+      "Inform the client that the medication will not work if swallowed — the dose is missed; do not double the next dose, and use the inhaler correctly next time",
+      "Administer activated charcoal to prevent anticholinergic toxicity"
+    ],
+    answer: 2,
+    explanation: "Tiotropium capsules are designed for INHALATION only — the device punctures the capsule and the powder is inhaled. If swallowed, the medication is poorly absorbed orally and will NOT produce therapeutic bronchodilation. The client simply missed the dose. Do NOT induce vomiting (aspiration risk) or give activated charcoal (not indicated for a non-toxic missed inhalation dose). Teach correct HandiHaler technique — this is a common administration error.",
+    class: "Respiratory",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // GI DRUGS
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client is scheduled for a CT scan with IV contrast tomorrow morning. Current medications include: metformin 1000mg twice daily, lisinopril 10mg daily, atorvastatin 40mg at bedtime, and aspirin 81mg daily. Baseline creatinine is 1.1 mg/dL.",
+    q: "Which medication adjustment requires the nurse to contact the provider BEFORE the procedure?",
+    options: [
+      "Lisinopril — ACE inhibitors must be held 24 hours before all imaging studies",
+      "Metformin — must be held before IV contrast and for 48 hours after, pending renal function reassessment",
+      "Atorvastatin — statins interact with iodinated contrast media",
+      "Aspirin — antiplatelet agents must be held before CT scans"
+    ],
+    answer: 1,
+    explanation: "Metformin must be HELD before IV contrast procedures. IV contrast can cause contrast-induced nephropathy (acute kidney injury). If renal function deteriorates, metformin accumulates → lactic acidosis (potentially fatal, 50% mortality). Protocol: hold metformin day of procedure, recheck creatinine/eGFR 48 hours post-procedure, resume only if renal function is stable. This applies even if baseline creatinine is normal.",
     class: "GI Drugs",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is teaching a client newly prescribed omeprazole (Prilosec) 20mg for GERD. Which statements should be included? SELECT ALL THAT APPLY.",
+    options: [
+      "Take omeprazole 30–60 minutes before your first meal of the day",
+      "Long-term use may decrease magnesium and vitamin B12 levels — annual monitoring is recommended",
+      "You may crush the tablet and mix it with water for easier swallowing",
+      "Omeprazole may reduce the effectiveness of clopidogrel if you take both",
+      "If you take calcium supplements, separate them from omeprazole by at least 2 hours",
+      "You should see symptom relief within 24 hours of starting"
+    ],
+    answer: [0, 1, 3, 4],
+    explanation: "(A) PPIs must be taken before meals — the proton pump must be actively secreting to be inhibited. (B) Long-term PPI use causes hypomagnesemia and B12 deficiency — monitoring warranted. (C) INCORRECT — do not crush delayed-release omeprazole (destroys enteric coating); capsule contents can be sprinkled on applesauce only. (D) Omeprazole inhibits CYP2C19 → reduces clopidogrel activation — significant interaction. (E) Calcium reduces PPI absorption — separate by 2 hours. (F) INCORRECT — PPIs typically take 1–4 days for symptom improvement, not 24 hours.",
+    class: "GI Drugs",
+    nclex_category: "Pharmacological Therapies",
+  },
+
+  // ══════════════════════════════════════════════
+  // MUSCULOSKELETAL
+  // ══════════════════════════════════════════════
+  {
+    type: "vignette",
+    vignette: "A client with multiple sclerosis has been receiving intrathecal baclofen via an implanted pump for severe spasticity for 2 years. The pump alarm activates and the client reports sudden dramatic increase in muscle spasms, extreme agitation, high fever (40.1°C/104.2°F), and has a seizure.",
+    q: "The nurse recognizes this as:",
+    options: [
+      "An MS relapse requiring high-dose IV methylprednisolone",
+      "Intrathecal baclofen withdrawal syndrome — a life-threatening emergency",
+      "Baclofen toxicity from pump overdose — administer physostigmine",
+      "Neuroleptic malignant syndrome from a recent medication change"
+    ],
+    answer: 1,
+    explanation: "Abrupt intrathecal baclofen withdrawal from pump failure = LIFE-THREATENING EMERGENCY. Withdrawal signs: rebound severe spasticity, hyperthermia, rhabdomyolysis, seizures, autonomic instability, multi-organ failure. This is distinct from baclofen TOXICITY (which causes CNS/respiratory depression, not spasticity). Treatment: restore baclofen delivery IMMEDIATELY, supportive care, ICU transfer. This has a high mortality rate if not recognized and treated promptly.",
+    class: "Musculoskeletal",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "standard",
+    q: "A client with rheumatoid arthritis has been prescribed methotrexate 15mg weekly. The nurse reviews the medication administration record and sees the order written as 'methotrexate 15mg daily.' The nurse should:",
+    options: [
+      "Administer the medication as written — 15mg is within the normal dose range",
+      "Administer the medication but reduce the dose to 7.5mg daily as a safety measure",
+      "HOLD the medication immediately and clarify the order — methotrexate for RA is given WEEKLY, not daily",
+      "Contact the pharmacy to confirm the dose before administering"
+    ],
+    answer: 2,
+    explanation: "This is one of the MOST DANGEROUS and frequently cited medication errors in nursing. Methotrexate for rheumatoid arthritis is dosed WEEKLY. Daily dosing causes fatal bone marrow suppression, severe mucositis, hepatotoxicity, and pulmonary toxicity. The nurse MUST HOLD the medication and clarify with the prescriber — this is a prescribing error. Even if pharmacy has filled it, the nurse is the last safety check. Never administer without clarification.",
+    class: "Musculoskeletal",
+    nclex_category: "Safety and Infection Control",
+  },
+  {
+    type: "sata",
+    q: "A nurse is teaching a client newly prescribed alendronate (Fosamax) 70mg weekly for osteoporosis. Which instructions are ESSENTIAL to include? SELECT ALL THAT APPLY.",
+    options: [
+      "Take the tablet on an empty stomach with 8 ounces of plain water only",
+      "Remain upright (sitting or standing) for at least 30 minutes after taking the medication",
+      "Take the medication with orange juice to improve absorption",
+      "Do not eat, drink anything other than water, or take other medications for at least 30 minutes",
+      "If you develop jaw pain or a loose tooth, notify your provider immediately",
+      "You may lie down after taking the medication if you feel dizzy"
+    ],
+    answer: [0, 1, 3, 4],
+    explanation: "(A) Empty stomach + plain water only — food reduces absorption by >60%. (B) MUST remain upright ≥30 min — prevents esophageal ulceration/erosion (caustic to esophagus). (C) INCORRECT — orange juice (and all beverages except water) reduces absorption. (D) No food, drink, or medications for 30 min — critical. (E) Osteonecrosis of the jaw is a rare but serious complication — report jaw pain, loose teeth, or exposed bone. (F) INCORRECT — lying down causes esophageal reflux of the drug → ulceration/perforation.",
+    class: "Musculoskeletal",
+    nclex_category: "Pharmacological Therapies",
   },
 ];
 
@@ -1429,56 +1640,219 @@ function FlashCards() {
   );
 }
 
+// Get unique drug classes for filter
+const QUIZ_CLASSES = ["All", ...Array.from(new Set(QUIZ_QUESTIONS.map(q => q.class)))];
+const TIMER_SECONDS = 60;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 function Quiz() {
+  const [mode, setMode] = useState(null); // null = setup screen
+  const [filterClass, setFilterClass] = useState("All");
+  const [timedMode, setTimedMode] = useState(false);
+  const [questions, setQuestions] = useState([]);
   const [qIndex, setQIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [answers, setAnswers] = useState([]);
+  const [timeLeft, setTimeLeft] = useState(TIMER_SECONDS);
+  const timerRef = useRef(null);
 
-  const q = QUIZ_QUESTIONS[qIndex];
+  const startQuiz = (missedOnly = false, missedQs = []) => {
+    let pool = missedOnly ? missedQs : QUIZ_QUESTIONS;
+    if (!missedOnly && filterClass !== "All") {
+      pool = pool.filter(q => q.class === filterClass);
+    }
+    const shuffled = shuffle(pool);
+    setQuestions(shuffled); questionsRef.current = shuffled; answersRef.current = []; scoreRef.current = 0;
+    setQIndex(0);
+    setSelected(null);
+    setScore(0);
+    setDone(false);
+    setShowExplanation(false);
+    setAnswers([]);
+    setTimeLeft(TIMER_SECONDS);
+    setMode("quiz");
+  };
+
+  const q = questions[qIndex];
+
+  // Timer logic
+  useEffect(() => {
+    if (mode !== "quiz" || !timedMode || selected !== null || done) return;
+    timerRef.current = setInterval(() => {
+      setTimeLeft(t => {
+        if (t <= 1) {
+          clearInterval(timerRef.current);
+          // Auto-submit as wrong
+          setSelected(-1);
+          setShowExplanation(true);
+          setAnswers(a => [...a, { correct: false, selected: -1, answer: q.answer }]);
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timerRef.current);
+  }, [qIndex, mode, timedMode, selected, done]);
+
+  const questionsRef = useRef([]);
+  const answersRef = useRef([]);
+  const scoreRef = useRef(0);
+  const [sataSelected, setSataSelected] = useState([]);
+
+  const isSata = q && q.type === "sata";
 
   const handleSelect = (i) => {
-    if (selected !== null) return;
-    setSelected(i);
+    if (isSata) {
+      // Toggle SATA selection
+      setSataSelected(prev =>
+        prev.includes(i) ? prev.filter(x => x !== i) : [...prev, i]
+      );
+    } else {
+      if (selected !== null) return;
+      clearInterval(timerRef.current);
+      setSelected(i);
+      setShowExplanation(true);
+      const correct = i === q.answer;
+      if (correct) setScore(s => { scoreRef.current = s + 1; return s + 1; });
+      setAnswers(a => { const n = [...a, { correct, selected: i, answer: q.answer }]; answersRef.current = n; return n; });
+    }
+  };
+
+  const handleSataSubmit = () => {
+    clearInterval(timerRef.current);
+    const correctAnswers = q.answer; // array
+    const correct = JSON.stringify([...sataSelected].sort()) === JSON.stringify([...correctAnswers].sort());
+    setSelected(sataSelected);
     setShowExplanation(true);
-    const correct = i === q.answer;
-    if (correct) setScore((s) => s + 1);
-    setAnswers((a) => [...a, { correct, selected: i, answer: q.answer }]);
+    if (correct) setScore(s => s + 1);
+    setAnswers(a => [...a, { correct, selected: sataSelected, answer: correctAnswers }]);
   };
 
   const handleNext = () => {
-    if (qIndex < QUIZ_QUESTIONS.length - 1) {
+    if (qIndex < questions.length - 1) {
       setQIndex(qIndex + 1);
       setSelected(null);
+      setSataSelected([]);
       setShowExplanation(false);
+      setTimeLeft(TIMER_SECONDS);
     } else {
+      // Save to progress
+      try {
+        const classBreakdown = {};
+        questionsRef.current.forEach((q, i) => {
+          const cls = q.class;
+          if (!classBreakdown[cls]) classBreakdown[cls] = { correct: 0, total: 0 };
+          classBreakdown[cls].total++;
+          if (answersRef.current[i]?.correct) classBreakdown[cls].correct++;
+        });
+        const prev = JSON.parse(localStorage.getItem("studentrx_progress") || "[]");
+        prev.push({ date: new Date().toISOString(), pct: Math.round((scoreRef.current / questionsRef.current.length) * 100), correct: scoreRef.current, total: questionsRef.current.length, filter: filterClass, timed: timedMode, classBreakdown });
+        localStorage.setItem("studentrx_progress", JSON.stringify(prev.slice(-50)));
+      } catch(e) {}
       setDone(true);
     }
   };
 
-  const restart = () => {
-    setQIndex(0); setSelected(null); setScore(0);
-    setDone(false); setShowExplanation(false); setAnswers([]);
-  };
+  // SETUP SCREEN
+  if (mode === null) {
+    return (
+      <div className="quiz-setup">
+        <h2 className="setup-title">Quiz Settings</h2>
 
+        <div className="setup-section">
+          <div className="setup-label">Filter by Drug Class</div>
+          <div className="setup-pills">
+            {QUIZ_CLASSES.map(cls => (
+              <button
+                key={cls}
+                className={`setup-pill ${filterClass === cls ? "active" : ""}`}
+                onClick={() => setFilterClass(cls)}
+              >
+                {cls}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="setup-section">
+          <div className="setup-label">Mode</div>
+          <div className="setup-modes">
+            <button
+              className={`mode-btn ${!timedMode ? "active" : ""}`}
+              onClick={() => setTimedMode(false)}
+            >
+              <span className="mode-icon">📖</span>
+              <span className="mode-name">Study Mode</span>
+              <span className="mode-desc">No time limit — read explanations</span>
+            </button>
+            <button
+              className={`mode-btn ${timedMode ? "active" : ""}`}
+              onClick={() => setTimedMode(true)}
+            >
+              <span className="mode-icon">⏱️</span>
+              <span className="mode-name">Timed Mode</span>
+              <span className="mode-desc">60 seconds per question</span>
+            </button>
+          </div>
+        </div>
+
+        <div className="setup-count">
+          {filterClass === "All" ? QUIZ_QUESTIONS.length : QUIZ_QUESTIONS.filter(q => q.class === filterClass).length} questions
+          {filterClass !== "All" && ` in ${filterClass}`} · shuffled randomly
+        </div>
+
+        <button className="start-btn" onClick={() => startQuiz()}>
+          Start Quiz →
+        </button>
+      </div>
+    );
+  }
+
+  // RESULTS SCREEN
   if (done) {
-    const pct = Math.round((score / QUIZ_QUESTIONS.length) * 100);
+    const pct = Math.round((score / questions.length) * 100);
+    const missedQs = questions.filter((_, i) => !answers[i]?.correct);
+
     return (
       <div className="quiz-done">
         <div className="score-circle">
           <span className="score-num">{pct}%</span>
-          <span className="score-label">{score}/{QUIZ_QUESTIONS.length} correct</span>
+          <span className="score-label">{score}/{questions.length} correct</span>
         </div>
-        <h2>{pct >= 80 ? "🎉 Excellent work!" : pct >= 60 ? "📚 Keep studying!" : "💪 Review the material and try again!"}</h2>
+        <h2>{pct >= 80 ? "🎉 Excellent work!" : pct >= 60 ? "📚 Keep studying!" : "💪 Review and try again!"}</h2>
         <p className="score-message">
           {pct >= 80 ? "You're well-prepared for NCLEX-style pharmacology questions." :
            pct >= 60 ? "Good foundation — focus on the topics you missed." :
            "Revisit the Study Guide and Flashcards, then try again."}
         </p>
+
+        <div className="result-actions">
+          {missedQs.length > 0 && (
+            <button className="missed-btn" onClick={() => startQuiz(true, missedQs)}>
+              🎯 Retake Missed Only ({missedQs.length})
+            </button>
+          )}
+          <button className="restart-btn" onClick={() => startQuiz()}>
+            🔀 New Shuffled Quiz
+          </button>
+          <button className="restart-btn outline" onClick={() => setMode(null)}>
+            ⚙️ Change Settings
+          </button>
+        </div>
+
         <div className="results-breakdown">
-          {QUIZ_QUESTIONS.map((question, i) => (
+          {questions.map((question, i) => (
             <div key={i} className={`result-item ${answers[i]?.correct ? "correct" : "wrong"}`}>
               <span>{answers[i]?.correct ? "✓" : "✗"}</span>
               <span>{question.class}</span>
@@ -1486,50 +1860,115 @@ function Quiz() {
             </div>
           ))}
         </div>
-        <button className="restart-btn" onClick={restart}>Retake Quiz</button>
       </div>
     );
   }
+
+  // QUIZ SCREEN
+  const timerPct = (timeLeft / TIMER_SECONDS) * 100;
+  const timerColor = timeLeft > 30 ? "#4caf7d" : timeLeft > 10 ? "#e0a85c" : "#e05c5c";
+  const typeLabels = { standard: "Multiple Choice", sata: "Select All That Apply", vignette: "Clinical Vignette", priority: "Priority Question" };
+  const typeColors = { standard: "#5c8de0", sata: "#c47ee0", vignette: "#e0a85c", priority: "#e05c5c" };
+  const qType = q.type || "standard";
 
   return (
     <div className="quiz">
       <div className="quiz-meta">
         <span className="quiz-class-tag">{q.class}</span>
-        <span className="quiz-counter">Question {qIndex + 1} of {QUIZ_QUESTIONS.length}</span>
-      </div>
-      <div className="progress-bar" style={{ marginBottom: "1.5rem" }}>
-        <div className="progress-fill" style={{ width: `${((qIndex) / QUIZ_QUESTIONS.length) * 100}%` }} />
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          {timedMode && (
+            <span className="timer-badge" style={{ color: timerColor, borderColor: timerColor }}>
+              ⏱ {timeLeft}s
+            </span>
+          )}
+          <span className="quiz-counter">Question {qIndex + 1} of {questions.length}</span>
+        </div>
       </div>
 
+      <div className="question-type-badge" style={{ background: typeColors[qType] + "22", color: typeColors[qType], borderColor: typeColors[qType] + "55" }}>
+        {qType === "sata" ? "📋 " : qType === "vignette" ? "📄 " : qType === "priority" ? "⚡ " : "❓ "}{typeLabels[qType]}
+      </div>
+
+      {timedMode && (
+        <div className="timer-bar">
+          <div className="timer-fill" style={{ width: `${timerPct}%`, background: timerColor }} />
+        </div>
+      )}
+
+      <div className="progress-bar" style={{ marginBottom: "1rem" }}>
+        <div className="progress-fill" style={{ width: `${(qIndex / questions.length) * 100}%` }} />
+      </div>
+
+      {q.vignette && (
+        <div className="vignette-box">
+          <div className="vignette-label">CLINICAL SCENARIO</div>
+          <p>{q.vignette}</p>
+        </div>
+      )}
+
+      {q.nclex_category && (
+        <div className="nclex-category">NCLEX Category: {q.nclex_category}</div>
+      )}
+
       <h2 className="quiz-question">{q.q}</h2>
+
+      {isSata && selected === null && (
+        <div className="sata-instruction">📋 Select ALL answers that apply, then click Submit.</div>
+      )}
 
       <div className="options">
         {q.options.map((opt, i) => {
           let cls = "option";
-          if (selected !== null) {
-            if (i === q.answer) cls += " correct";
-            else if (i === selected && selected !== q.answer) cls += " wrong";
-            else cls += " dimmed";
+          if (isSata) {
+            if (selected !== null) {
+              if (q.answer.includes(i)) cls += " correct";
+              else if (sataSelected.includes(i) && !q.answer.includes(i)) cls += " wrong";
+              else cls += " dimmed";
+            } else {
+              if (sataSelected.includes(i)) cls += " sata-selected";
+            }
+          } else {
+            if (selected !== null) {
+              if (i === q.answer) cls += " correct";
+              else if (i === selected && selected !== q.answer) cls += " wrong";
+              else cls += " dimmed";
+            }
           }
           return (
-            <button key={i} className={cls} onClick={() => handleSelect(i)}>
-              <span className="option-letter">{["A","B","C","D"][i]}</span>
+            <button key={i} className={cls} onClick={() => handleSelect(i)} disabled={selected !== null}>
+              <span className="option-letter">{["A","B","C","D","E","F"][i]}</span>
               <span>{opt}</span>
+              {isSata && selected === null && sataSelected.includes(i) && <span className="sata-check">✓</span>}
             </button>
           );
         })}
       </div>
 
+      {isSata && selected === null && sataSelected.length > 0 && (
+        <button className="next-btn" onClick={handleSataSubmit} style={{ marginTop: "0.75rem" }}>
+          Submit Answers ({sataSelected.length} selected)
+        </button>
+      )}
+
       {showExplanation && (
         <div className="explanation">
-          <div className="exp-title">{selected === q.answer ? "✓ Correct!" : "✗ Incorrect"}</div>
+          <div className="exp-title">
+            {isSata
+              ? (JSON.stringify([...sataSelected].sort()) === JSON.stringify([...q.answer].sort()) ? "✓ Correct!" : "✗ Incorrect")
+              : selected === q.answer ? "✓ Correct!" : selected === -1 ? "⏰ Time's up!" : "✗ Incorrect"}
+          </div>
+          {isSata && (
+            <div style={{ fontSize: "0.78rem", color: "var(--gold)", marginBottom: "0.4rem" }}>
+              Correct answers: {q.answer.map(i => ["A","B","C","D","E","F"][i]).join(", ")}
+            </div>
+          )}
           <p>{q.explanation}</p>
         </div>
       )}
 
       {selected !== null && (
         <button className="next-btn" onClick={handleNext}>
-          {qIndex < QUIZ_QUESTIONS.length - 1 ? "Next Question →" : "See Results"}
+          {qIndex < questions.length - 1 ? "Next Question →" : "See Results"}
         </button>
       )}
     </div>
@@ -1694,12 +2133,285 @@ You are NOT a replacement for clinical judgment or a licensed provider. For pati
   );
 }
 
+
+// ── MNEMONICS ─────────────────────────────────────────────────────────────────
+
+const MNEMONICS_DATA = [
+  { category: "Anticoagulants", color: "#e05c5c", icon: "🩸", items: [
+    { drug: "Heparin antidote", mnemonic: "PROTamine = antidote for hePARIN", detail: "Protamine sulfate reverses heparin. Think: you PROTEST heparin effects with Protamine. For LMWH (enoxaparin): partial reversal ~60%." },
+    { drug: "Warfarin reversal", mnemonic: "Vitamin K = KEY to unlock warfarin. FFP = FAST reversal", detail: "Vitamin K (slow, oral/IV). FFP or 4-factor PCC for urgent reversal. INR goal: 2-3 most patients, 2.5-3.5 for mechanical valves. Many drug/food interactions." },
+    { drug: "HIT recognition", mnemonic: "4 Ts: Thrombocytopenia, Timing (5-10 days), Thrombosis, oTher causes excluded", detail: "HIT is paradoxically THROMBOTIC. Platelet drop >50% + new clots = STOP heparin immediately. Switch to non-heparin anticoagulant (argatroban, fondaparinux)." },
+    { drug: "DOACs reversal", mnemonic: "Rivaroxaban/Apixaban = Andexanet alfa. Dabigatran = Praxbind", detail: "Factor Xa inhibitors (rivaroxaban, apixaban) reversed by Andexanet alfa. Direct thrombin inhibitor (dabigatran) reversed by idarucizumab (Praxbind). No routine monitoring needed." },
+  ]},
+  { category: "Cardiac", color: "#e05ca0", icon: "❤️", items: [
+    { drug: "Beta Blockers (-olol)", mnemonic: "-OLOL = slOLOw. Hold if HR <60 or BP <90/60", detail: "NEVER stop abruptly (rebound MI/HTN). Masks hypoglycemia tachycardia. Antidote: glucagon. Non-selective (propranolol) = avoid in asthma/COPD." },
+    { drug: "ACE Inhibitors (-pril)", mnemonic: "ACE = Always Causes Effects on K+ and Cough", detail: "Dry cough (10-15%) = bradykinin. Switch to ARB if intolerable. Contraindicated: pregnancy. Monitor: K+, creatinine, BP. Angioedema = STOP permanently." },
+    { drug: "Digoxin toxicity", mnemonic: "DIRT: Dysrhythmias, Irregular vision (halos), nausea/vomiting, hypokalemia Triggers it", detail: "Yellow-green halos = classic. Hypokalemia = #1 trigger. Therapeutic: 0.5-2 ng/mL. Antidote: Digibind. Hold if HR <60. Narrow therapeutic index!" },
+    { drug: "Nitroglycerin", mnemonic: "NTG: No Taking with Girlfriend (Viagra/Cialis)", detail: "ABSOLUTE contraindication with PDE-5 inhibitors. Store in dark glass bottle. Up to 3 SL tablets q5 min. IV: use non-PVC tubing. Headache is expected." },
+    { drug: "Amiodarone toxicity", mnemonic: "PALE Thyroid: Pulmonary, Altered skin, Liver, Eye + Thyroid", detail: "Most serious = pulmonary toxicity (pneumonitis). Blue-gray skin (irreversible). Half-life 40-55 DAYS. Increases warfarin effect 30-50%. Monitor TFTs, LFTs, PFTs, ophthalmology." },
+  ]},
+  { category: "Pain/Opioids", color: "#c47ee0", icon: "🎯", items: [
+    { drug: "Opioid toxicity triad", mnemonic: "RIP: Respiratory depression, mIOsis (pinpoint pupils), drowsiness (sedation)", detail: "RR <12 = emergency. Antidote: Naloxone (Narcan). WARNING: Narcan half-life 30-90 min is SHORTER than most opioids - re-narcotization happens! Repeat doses PRN." },
+    { drug: "Acetaminophen max dose", mnemonic: "4g/day healthy, 2g/day elderly/liver — check ALL sources!", detail: "Hidden in Percocet, Vicodin, NyQuil, DayQuil. Overdose = #1 cause of acute liver failure. Antidote: N-acetylcysteine (NAC/Mucomyst). Most effective within 8-10 hours." },
+    { drug: "Naloxone (Narcan)", mnemonic: "Narcan is SHORT — shorter than most opioids. Watch for re-narcotization!", detail: "Half-life only 30-90 min. Morphine lasts 4-6 hours. ALWAYS monitor after giving Narcan. May need repeated doses or infusion. Precipitates acute withdrawal in opioid-dependent patients." },
+  ]},
+  { category: "Antibiotics", color: "#7ec87e", icon: "🦠", items: [
+    { drug: "Vancomycin Red Man Syndrome", mnemonic: "RED = Rate-related, not allergic. Diphenhydramine treats it", detail: "Slow infusion to 60+ min. Give diphenhydramine. NOT a true allergy - can rechallenge at slower rate. Also: nephrotoxic + ototoxic. Monitor trough/AUC." },
+    { drug: "Fluoroquinolone warnings", mnemonic: "FLOCK: Flex-tendon rupture, Lengthened QT, Oh no C.diff, Children contraindicated, Kids cartilage", detail: "BBW: tendon rupture (especially Achilles, elderly, corticosteroid users). QT prolongation. Contraindicated <18 years. Separate from Ca, Mg, Fe, antacids by 2+ hours." },
+    { drug: "Metronidazole (Flagyl)", mnemonic: "FLAGYL + ALCOHOL = FLAGRANT disulfiram reaction", detail: "Avoid alcohol DURING treatment AND 48-72 hours AFTER. Metallic taste is common. Urine may turn dark brown (warn patient - not hematuria). Treats C.diff, anaerobes, Trichomonas." },
+  ]},
+  { category: "Endocrine", color: "#e07e5c", icon: "⚗️", items: [
+    { drug: "Insulin types memory", mnemonic: "RANI: Regular (IV ok, clear), Aspart/Lispro (rapid, clear), NPH (cloudy, intermediate), Insulin glargine (clear, 24hr peakless)", detail: "ONLY Regular insulin can be given IV. NEVER mix glargine with any other insulin. Clear does NOT always mean Regular (glargine is also clear). Cloudy = NPH always." },
+    { drug: "Hypoglycemia 15-15 rule", mnemonic: "15g carbs, wait 15 min, recheck. Repeat if still <70", detail: "15g fast carbs = 4oz juice, regular soda, glucose tablets. If unconscious: D50 IV or glucagon IM. Follow with complex carb + protein snack to prevent rebound." },
+    { drug: "Metformin + Contrast dye", mnemonic: "CONTRAST = CONTRAINDICATED with Metformin temporarily", detail: "Hold BEFORE contrast, restart 48 hours AFTER if kidneys stable. Risk: contrast nephropathy + metformin accumulation = lactic acidosis (50% mortality). Applies even with normal creatinine." },
+  ]},
+  { category: "Psych Meds", color: "#e0c05c", icon: "🧠", items: [
+    { drug: "EPS side effects", mnemonic: "ADAPT: Akathisia, Dystonia (acute), Akinesia, Pseudo-parkinsonism, Tardive dyskinesia (irreversible)", detail: "Acute dystonia (within hours/days) = benztropine or diphenhydramine. Tardive dyskinesia = IRREVERSIBLE with long-term use. All caused by D2 receptor blockade." },
+    { drug: "NMS vs Serotonin Syndrome", mnemonic: "NMS = SLOW + RIGID. SS = FAST + HYPERACTIVE (clonus, hyperreflexia)", detail: "NMS: slow onset, lead-pipe rigidity, hyperthermia, elevated CK, altered LOC. Treat: stop antipsychotic, dantrolene. SS: fast onset, clonus, agitation, diaphoresis. Treat: cyproheptadine." },
+    { drug: "Lithium toxicity signs", mnemonic: "TREMOR first (early), then CONFUSION (late) = HOLD and call provider", detail: "Therapeutic: 0.6-1.2 mEq/L. Dehydration + NSAIDs = TOXICITY risk. NO antidote. Severe toxicity requires hemodialysis. Consistent Na+ and fluid intake is critical." },
+    { drug: "Benzodiazepines", mnemonic: "NEVER cold turkey — SEIZURE risk! Taper slowly.", detail: "Physical dependence develops even at therapeutic doses. Abrupt withdrawal = life-threatening seizures. Antidote = Flumazenil (but use cautiously — can precipitate withdrawal seizures in dependent patients)." },
+  ]},
+  { category: "Musculoskeletal", color: "#d4a06a", icon: "🦴", items: [
+    { drug: "Alendronate (Fosamax)", mnemonic: "UPRIGHT after = UP RIGHT away from bed (no lying down for 30 min!)", detail: "Empty stomach + plain WATER only. UPRIGHT 30+ min. No food/meds 30 min after. Weekly 70mg. Watch for jaw osteonecrosis and atypical femur fractures (long-term)." },
+    { drug: "Methotrexate dosing", mnemonic: "MTX = Must Take Weekly. Daily = DEADLY (bone marrow suppression)", detail: "Weekly dosing for RA - one of most dangerous dosing errors in medicine. Supplement folic acid. Category X. Antidote: leucovorin. Avoid alcohol (additive hepatotoxicity) and NSAIDs." },
+    { drug: "Baclofen withdrawal", mnemonic: "BACLOFEN STOP = BAD: seizures, hyperthermia, rhabdomyolysis, death", detail: "Especially dangerous with intrathecal pump failure (pump alarm = EMERGENCY). Withdrawal: severe spasticity, hyperthermia, altered LOC, seizures. Must TAPER slowly." },
+  ]},
+];
+
+function Mnemonics() {
+  const [activeCat, setActiveCat] = useState(0);
+  const [expandedItem, setExpandedItem] = useState(null);
+  const cat = MNEMONICS_DATA[activeCat];
+  return (
+    <div className="mnemonics">
+      <div className="mnemonics-header">
+        <h2 className="section-title">🧠 Mnemonics Library</h2>
+        <p className="section-sub">Memory tricks that stick — built for NCLEX success</p>
+      </div>
+      <div className="mnemonic-cat-tabs">
+        {MNEMONICS_DATA.map((c, i) => (
+          <button key={i} className={"mnemonic-cat-btn" + (activeCat === i ? " active" : "")}
+            style={{"--mcolor": c.color}} onClick={() => { setActiveCat(i); setExpandedItem(null); }}>
+            <span>{c.icon}</span><span>{c.category}</span>
+          </button>
+        ))}
+      </div>
+      <div className="mnemonic-list">
+        {cat.items.map((item, i) => (
+          <div key={i} className={"mnemonic-card" + (expandedItem === i ? " expanded" : "")}
+            style={{"--mcolor": cat.color}} onClick={() => setExpandedItem(expandedItem === i ? null : i)}>
+            <div className="mnemonic-top">
+              <div>
+                <div className="mnemonic-drug">{item.drug}</div>
+                <div className="mnemonic-phrase">💡 {item.mnemonic}</div>
+              </div>
+              <div className="mnemonic-expand">{expandedItem === i ? "−" : "+"}</div>
+            </div>
+            {expandedItem === i && <div className="mnemonic-detail">{item.detail}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── LAB VALUES ────────────────────────────────────────────────────────────────
+
+const LAB_DATA = [
+  { category: "Hematology", icon: "🩸", color: "#e05c5c", labs: [
+    { name: "Hemoglobin (Hgb)", normal: "M: 13.5–17.5 g/dL | F: 12–15.5 g/dL", low: "Anemia — fatigue, pallor, tachycardia. Transfuse if <7 g/dL or symptomatic", high: "Polycythemia — increased clot risk", drugs: "Iron supplements, EPO (epoetin alfa) raise Hgb. Chemotherapy lowers it." },
+    { name: "Platelets (PLT)", normal: "150,000–400,000/mm³", low: "<50,000 = bleeding risk. <20,000 = spontaneous bleed. HIT: drops >50% on days 5-10 of heparin", high: ">400,000 = thrombocytosis — clot risk", drugs: "Heparin (HIT), aspirin, chemotherapy, methotrexate all affect platelets" },
+    { name: "WBC", normal: "4,500–11,000/mm³", low: "<1,000 neutrophils (ANC) = neutropenia — infection risk. Hold chemotherapy if ANC <500", high: ">11,000 = infection, inflammation, leukemia, corticosteroids", drugs: "Corticosteroids elevate WBC. Chemotherapy, methotrexate decrease WBC" },
+    { name: "INR", normal: "Therapeutic: 2–3 (most) | 2.5–3.5 (mechanical valves)", low: "<2 = subtherapeutic → clot risk → increase warfarin", high: ">3 = supratherapeutic → bleed risk. >5 = hold warfarin, give Vitamin K", drugs: "Warfarin (intentionally elevated). Vitamin K foods lower INR. Clarithromycin, amiodarone increase INR." },
+    { name: "aPTT", normal: "Therapeutic: 60–100 sec (1.5–2.5x normal ~25–35 sec)", low: "<60 = subtherapeutic heparin → increase rate", high: ">100 = supratherapeutic. >120 = hold and notify provider", drugs: "Unfractionated heparin (UFH) only. LMWH (enoxaparin) monitored by Anti-Xa, not aPTT." },
+  ]},
+  { category: "Electrolytes", icon: "⚡", color: "#e0c05c", labs: [
+    { name: "Sodium (Na⁺)", normal: "136–145 mEq/L", low: "<136 = hyponatremia. Sx: headache, confusion, seizures. Correct SLOWLY (<0.5 mEq/L/hr) — too fast = osmotic demyelination syndrome", high: ">145 = hypernatremia. Sx: thirst, confusion, dry membranes, seizures", drugs: "Loop diuretics cause hyponatremia. Lithium → polyuria → hypernatremia risk." },
+    { name: "Potassium (K⁺)", normal: "3.5–5.0 mEq/L", low: "<3.5 = hypokalemia. Sx: muscle weakness, flat T-waves, U-waves, dysrhythmias. INCREASES DIGOXIN TOXICITY", high: ">5.0 = hyperkalemia. Sx: peaked T-waves, bradycardia, cardiac arrest. ACE inhibitors, ARBs, spironolactone can cause", drugs: "Loop diuretics WASTE K+. K+-sparing diuretics, ACE inhibitors, ARBs RETAIN K+." },
+    { name: "Calcium (Ca²⁺)", normal: "8.5–10.5 mg/dL", low: "<8.5 = hypocalcemia. Sx: tetany, Chvostek sign, Trousseau sign, prolonged QT, seizures", high: ">10.5 = hypercalcemia. 'Bones, Groans, Stones, Moans' — bone pain, GI symptoms, kidney stones, confusion", drugs: "Loop diuretics lower Ca²+. Thiazides raise Ca²+. Bisphosphonates can cause hypocalcemia." },
+    { name: "Magnesium (Mg²⁺)", normal: "1.5–2.5 mEq/L", low: "<1.5 = hypomagnesemia. Sx: tremors, seizures, dysrhythmias, refractory hypokalemia. Long-term PPIs can cause.", high: ">2.5 = hypermagnesemia. Sx: loss of DTRs, respiratory depression, cardiac arrest. Antidote: calcium gluconate", drugs: "Loop diuretics waste Mg²+. Long-term PPIs cause hypomagnesemia. Antacids can cause hypermagnesemia." },
+  ]},
+  { category: "Kidney", icon: "🫘", color: "#5c8de0", labs: [
+    { name: "BUN", normal: "7–20 mg/dL", low: "Liver failure, malnutrition, overhydration", high: ">20 = azotemia. Dehydration, renal failure, GI bleed. BUN:Cr ratio >20:1 = pre-renal cause", drugs: "NSAIDs, ACE inhibitors, aminoglycosides can elevate BUN." },
+    { name: "Creatinine (Cr)", normal: "M: 0.7–1.3 mg/dL | F: 0.5–1.1 mg/dL", low: "Decreased muscle mass (elderly, malnourished — may mask renal impairment)", high: "Indicates renal dysfunction. Doubling = ~50% loss of renal function", drugs: "NSAIDs, aminoglycosides, vancomycin, contrast dye — nephrotoxic. Hold metformin if rising." },
+    { name: "eGFR", normal: ">60 mL/min/1.73m²", low: "<60 = CKD. <30 = severe — hold/dose-adjust many drugs. <15 = kidney failure", high: "Normal/high in early diabetic nephropathy", drugs: "Hold metformin if <30. Dose-adjust: vancomycin, digoxin, enoxaparin, lithium, gabapentin." },
+    { name: "Urine Output", normal: "≥30 mL/hr (≥0.5 mL/kg/hr)", low: "<30 mL/hr = oliguria — notify provider immediately", high: ">2,500 mL/24hr = polyuria — DI, hyperglycemia, lithium toxicity", drugs: "Loop diuretics should produce rapid diuresis. Lithium causes nephrogenic diabetes insipidus." },
+  ]},
+  { category: "Cardiac", icon: "❤️", color: "#e05ca0", labs: [
+    { name: "Troponin I/T", normal: "<0.04 ng/mL (varies by lab)", low: "N/A", high: "MOST SPECIFIC marker for MI. Rises 3-6 hrs, peaks 24 hrs, elevated 7-14 days after MI. Also elevated: PE, myocarditis, sepsis", drugs: "No drugs directly affect troponin — elevation = cardiac damage." },
+    { name: "BNP / NT-proBNP", normal: "BNP <100 pg/mL | NT-proBNP <300 pg/mL", low: "Rules OUT heart failure", high: "Heart failure — higher = worse. BNP >500 = definitive HF. Guides diuretic therapy.", drugs: "Sacubitril (Entresto) inhibits BNP breakdown — elevates BNP levels. Do not use BNP to monitor response in patients on Entresto." },
+    { name: "Digoxin level", normal: "Therapeutic: 0.5–2.0 ng/mL | HF target: 0.5–0.9", low: "<0.5 = subtherapeutic", high: ">2.0 = toxicity risk. Toxicity at lower levels if hypokalemia present! Antidote: Digibind", drugs: "Quinidine, amiodarone, verapamil all INCREASE digoxin levels — dose reduction needed." },
+  ]},
+  { category: "Liver", icon: "🫀", color: "#7ec87e", labs: [
+    { name: "ALT / AST", normal: "ALT: 7–56 U/L | AST: 10–40 U/L", low: "N/A", high: "Hepatocellular damage. >3x ULN = consider holding hepatotoxic drugs. ALT more liver-specific. AST also elevated in MI.", drugs: "Methotrexate, amiodarone, statins, acetaminophen OD, isoniazid, valproate — hepatotoxic." },
+    { name: "Albumin", normal: "3.5–5.0 g/dL", low: "<3.5 = malnutrition, liver disease, nephrotic syndrome. Low albumin → more FREE drug → toxicity risk for highly protein-bound drugs", high: "Dehydration (hemoconcentration)", drugs: "Warfarin, phenytoin, diazepam are highly protein-bound — low albumin increases free drug levels → toxicity." },
+    { name: "Bilirubin (Total)", normal: "0.1–1.2 mg/dL", low: "N/A", high: ">2.5 = clinical jaundice. Direct (conjugated) = obstruction. Indirect = hemolysis or liver failure", drugs: "Rifampin turns fluids orange (not jaundice). Many drugs cause drug-induced liver injury (DILI)." },
+  ]},
+  { category: "Glucose", icon: "🍬", color: "#e07e5c", labs: [
+    { name: "Fasting Blood Glucose", normal: "70–99 mg/dL fasting | <140 mg/dL 2hr post-meal", low: "<70 = hypoglycemia. 15-15 rule. <50 = severe → D50 IV. Beta-blockers MASK tachycardia (diaphoresis still occurs).", high: ">126 fasting = diabetes. >180 in hospital = treat with insulin", drugs: "Insulin causes hypoglycemia. Corticosteroids cause hyperglycemia. Beta-blockers mask hypoglycemia symptoms." },
+    { name: "HbA1c", normal: "<5.7% normal | 5.7–6.4% prediabetes | ≥6.5% diabetes", low: "Lower = better glucose control. Goal <7% for most diabetics", high: ">9% = poor control. >12% = very poor control → DKA risk", drugs: "Metformin, insulin, all diabetes drugs aim to lower HbA1c. Reflects 3-month average glucose." },
+    { name: "Potassium in DKA", normal: "3.5–5.0 mEq/L — CRITICAL in DKA management", low: "Insulin in DKA drives K+ INTO cells → rapid drop. Replace K+ if <3.5 BEFORE starting insulin", high: "Initial DKA K+ often HIGH (acidosis shifts K+ out of cells) despite total body deficit", drugs: "ALWAYS give K+ replacement with insulin in DKA. Monitor K+ every 1-2 hours during treatment." },
+  ]},
+];
+
+function LabValues() {
+  const [activeCat, setActiveCat] = useState(0);
+  const [expandedLab, setExpandedLab] = useState(null);
+  const [search, setSearch] = useState("");
+  const cat = LAB_DATA[activeCat];
+  const searchActive = search.trim().length > 0;
+  const searchResults = searchActive
+    ? LAB_DATA.flatMap(c => c.labs.map(l => ({ ...l, color: c.color }))).filter(l =>
+        l.name.toLowerCase().includes(search.toLowerCase()) || l.drugs.toLowerCase().includes(search.toLowerCase()))
+    : cat.labs;
+  return (
+    <div className="lab-values">
+      <div className="mnemonics-header">
+        <h2 className="section-title">🔬 Lab Values Reference</h2>
+        <p className="section-sub">Normal ranges, critical values and drug effects</p>
+      </div>
+      <div className="search-wrap" style={{marginBottom:"1rem"}}>
+        <span className="search-icon">🔍</span>
+        <input className="search-input" placeholder="Search labs or drugs..." value={search}
+          onChange={e => { setSearch(e.target.value); setExpandedLab(null); }} />
+        {search && <button className="search-clear" onClick={() => setSearch("")}>✕</button>}
+      </div>
+      {!searchActive && (
+        <div className="mnemonic-cat-tabs">
+          {LAB_DATA.map((c, i) => (
+            <button key={i} className={"mnemonic-cat-btn" + (activeCat === i ? " active" : "")}
+              style={{"--mcolor": c.color}} onClick={() => { setActiveCat(i); setExpandedLab(null); }}>
+              <span>{c.icon}</span><span>{c.category}</span>
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="lab-list">
+        {searchResults.map((lab, i) => (
+          <div key={i} className={"lab-card" + (expandedLab === i ? " expanded" : "")}
+            style={{"--lcolor": lab.color || cat.color}} onClick={() => setExpandedLab(expandedLab === i ? null : i)}>
+            <div className="lab-top">
+              <div>
+                <div className="lab-name">{lab.name}</div>
+                <div className="lab-normal">{lab.normal}</div>
+              </div>
+              <div className="mnemonic-expand">{expandedLab === i ? "−" : "+"}</div>
+            </div>
+            {expandedLab === i && (
+              <div className="lab-detail">
+                <div className="lab-row"><span className="lab-tag low">📉 Low</span><p>{lab.low}</p></div>
+                <div className="lab-row"><span className="lab-tag high">📈 High</span><p>{lab.high}</p></div>
+                <div className="lab-row"><span className="lab-tag drugs">💊 Drug Effects</span><p>{lab.drugs}</p></div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── PROGRESS TRACKER ──────────────────────────────────────────────────────────
+
+function Progress() {
+  const [history, setHistory] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("studentrx_progress") || "[]"); }
+    catch { return []; }
+  });
+  const [showClear, setShowClear] = useState(false);
+  const clearHistory = () => { localStorage.removeItem("studentrx_progress"); setHistory([]); setShowClear(false); };
+  const avgScore = history.length > 0 ? Math.round(history.reduce((s, x) => s + x.pct, 0) / history.length) : 0;
+  const bestScore = history.length > 0 ? Math.max(...history.map(x => x.pct)) : 0;
+  const totalQ = history.reduce((s, x) => s + (x.total || 0), 0);
+
+  const classPerf = {};
+  history.forEach(session => {
+    if (session.classBreakdown) {
+      Object.entries(session.classBreakdown).forEach(([cls, data]) => {
+        if (!classPerf[cls]) classPerf[cls] = { correct: 0, total: 0 };
+        classPerf[cls].correct += data.correct;
+        classPerf[cls].total += data.total;
+      });
+    }
+  });
+  const weakSpots = Object.entries(classPerf)
+    .map(([cls, d]) => ({ cls, pct: Math.round((d.correct / d.total) * 100), total: d.total }))
+    .filter(x => x.total >= 2).sort((a, b) => a.pct - b.pct).slice(0, 5);
+
+  if (history.length === 0) {
+    return (
+      <div className="progress-empty">
+        <div className="empty-icon">📊</div>
+        <h2>No quiz history yet</h2>
+        <p>Complete a quiz to start tracking your progress. Your scores and weak spots will appear here automatically.</p>
+        <p style={{fontSize:"0.75rem", color:"var(--text-dimmer)", marginTop:"0.5rem"}}>Progress is saved locally on this device.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="progress-tab">
+      <div className="mnemonics-header">
+        <h2 className="section-title">📊 Your Progress</h2>
+        <p className="section-sub">{history.length} quiz session{history.length !== 1 ? "s" : ""} completed</p>
+      </div>
+      <div className="stats-grid">
+        <div className="stat-card"><div className="stat-num" style={{color:"var(--gold)"}}>{avgScore}%</div><div className="stat-label">Average Score</div></div>
+        <div className="stat-card"><div className="stat-num" style={{color:"var(--green)"}}>{bestScore}%</div><div className="stat-label">Best Score</div></div>
+        <div className="stat-card"><div className="stat-num" style={{color:"var(--blue)"}}>{history.length}</div><div className="stat-label">Quizzes Taken</div></div>
+        <div className="stat-card"><div className="stat-num" style={{color:"#c47ee0"}}>{totalQ}</div><div className="stat-label">Questions Answered</div></div>
+      </div>
+      {weakSpots.length > 0 && (
+        <div className="weak-spots">
+          <div className="ws-title">🎯 Your Weak Spots — Focus here</div>
+          {weakSpots.map((ws, i) => (
+            <div key={i} className="ws-item">
+              <div className="ws-name">{ws.cls}</div>
+              <div className="ws-bar-wrap">
+                <div className="ws-bar"><div className="ws-fill" style={{width:`${ws.pct}%`, background: ws.pct >= 70 ? "var(--green)" : ws.pct >= 50 ? "var(--gold)" : "var(--red)"}}/></div>
+                <span className="ws-pct" style={{color: ws.pct >= 70 ? "var(--green)" : ws.pct >= 50 ? "var(--gold)" : "var(--red)"}}>{ws.pct}%</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="history-section">
+        <div className="ws-title">📅 Recent Sessions</div>
+        {[...history].reverse().slice(0, 10).map((s, i) => (
+          <div key={i} className="history-item">
+            <div className="history-left">
+              <div className="history-date">{new Date(s.date).toLocaleDateString("en-US", {month:"short", day:"numeric", hour:"2-digit", minute:"2-digit"})}</div>
+              <div className="history-mode">{s.filter !== "All" ? s.filter : "All Classes"} · {s.timed ? "⏱ Timed" : "📖 Study"}</div>
+            </div>
+            <div className="history-score" style={{color: s.pct >= 80 ? "var(--green)" : s.pct >= 60 ? "var(--gold)" : "var(--red)"}}>
+              {s.pct}%<span className="history-fraction">{s.correct}/{s.total}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <button className="clear-btn" onClick={() => setShowClear(true)}>Clear History</button>
+      {showClear && (
+        <div className="confirm-clear">
+          <p>Are you sure? This cannot be undone.</p>
+          <div style={{display:"flex", gap:"0.5rem", marginTop:"0.5rem"}}>
+            <button className="restart-btn outline" onClick={() => setShowClear(false)}>Cancel</button>
+            <button className="restart-btn" style={{borderColor:"var(--red)", color:"var(--red)"}} onClick={clearHistory}>Yes, Clear</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── APP ───────────────────────────────────────────────────────────────────────
 
 const TABS = [
   { id: "study", label: "Study Guide", icon: "📖" },
   { id: "cards", label: "Flashcards", icon: "🃏" },
   { id: "quiz", label: "Quiz", icon: "✏️" },
+  { id: "mnemonics", label: "Mnemonics", icon: "🧠" },
+  { id: "labs", label: "Lab Values", icon: "🔬" },
+  { id: "progress", label: "Progress", icon: "📊" },
   { id: "tutor", label: "AI Tutor", icon: "🤖" },
 ];
 
@@ -2407,6 +3119,246 @@ export default function App() {
           cursor: pointer;
         }
 
+        /* QUESTION TYPE BADGE */
+        .question-type-badge {
+          display: inline-block;
+          font-size: 0.68rem;
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          padding: 0.25rem 0.65rem;
+          border-radius: 100px;
+          border: 1px solid;
+          margin-bottom: 0.75rem;
+        }
+
+        .vignette-box {
+          background: var(--navy-light);
+          border: 1px solid var(--gold)33;
+          border-left: 3px solid var(--gold);
+          border-radius: 0 10px 10px 0;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          font-size: 0.84rem;
+          line-height: 1.6;
+          color: var(--text);
+        }
+
+        .vignette-label {
+          font-size: 0.58rem;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--gold);
+          margin-bottom: 0.4rem;
+        }
+
+        .nclex-category {
+          font-size: 0.65rem;
+          color: var(--text-dimmer);
+          letter-spacing: 0.05em;
+          margin-bottom: 0.5rem;
+        }
+
+        .sata-instruction {
+          font-size: 0.78rem;
+          color: var(--gold);
+          background: var(--gold)0d;
+          border: 1px solid var(--gold)33;
+          border-radius: 8px;
+          padding: 0.5rem 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .option.sata-selected {
+          border-color: var(--gold)88;
+          background: var(--gold)0d;
+        }
+
+        .sata-check {
+          margin-left: auto;
+          color: var(--gold);
+          font-weight: 700;
+        }
+
+        /* QUIZ SETUP */
+        .quiz-setup {
+          padding: 0.5rem 0;
+        }
+
+        .setup-title {
+          font-family: 'DM Serif Display', serif;
+          font-size: 1.4rem;
+          color: var(--cream);
+          margin-bottom: 1.5rem;
+        }
+
+        .setup-section {
+          margin-bottom: 1.5rem;
+        }
+
+        .setup-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--text-dimmer);
+          margin-bottom: 0.6rem;
+        }
+
+        .setup-pills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem;
+        }
+
+        .setup-pill {
+          padding: 0.35rem 0.75rem;
+          background: var(--navy-light);
+          border: 1px solid var(--navy-border);
+          border-radius: 100px;
+          color: var(--text-dim);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.72rem;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .setup-pill.active {
+          background: var(--gold)22;
+          border-color: var(--gold);
+          color: var(--gold);
+        }
+
+        .setup-modes {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .mode-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.9rem 1rem;
+          background: var(--navy-mid);
+          border: 1px solid var(--navy-border);
+          border-radius: 10px;
+          text-align: left;
+          cursor: pointer;
+          transition: all 0.2s;
+          font-family: 'DM Sans', sans-serif;
+        }
+
+        .mode-btn.active {
+          border-color: var(--gold);
+          background: var(--gold)0d;
+        }
+
+        .mode-icon { font-size: 1.25rem; }
+
+        .mode-name {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--cream);
+          display: block;
+        }
+
+        .mode-desc {
+          font-size: 0.75rem;
+          color: var(--text-dim);
+          display: block;
+        }
+
+        .setup-count {
+          font-size: 0.8rem;
+          color: var(--text-dim);
+          margin-bottom: 1.25rem;
+          padding: 0.6rem 0.85rem;
+          background: var(--navy-mid);
+          border-radius: 8px;
+          border: 1px solid var(--navy-border);
+        }
+
+        .start-btn {
+          width: 100%;
+          padding: 0.95rem;
+          background: var(--gold);
+          border: none;
+          border-radius: 12px;
+          color: var(--navy);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 1rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: opacity 0.2s;
+        }
+
+        .start-btn:hover { opacity: 0.9; }
+
+        /* TIMER */
+        .timer-badge {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 0.2rem 0.5rem;
+          border-radius: 6px;
+          border: 1px solid;
+          transition: color 0.3s, border-color 0.3s;
+        }
+
+        .timer-bar {
+          height: 3px;
+          background: var(--navy-light);
+          border-radius: 100px;
+          overflow: hidden;
+          margin-bottom: 0.5rem;
+        }
+
+        .timer-fill {
+          height: 100%;
+          border-radius: 100px;
+          transition: width 1s linear, background 0.3s;
+        }
+
+        /* RESULT ACTIONS */
+        .result-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .missed-btn {
+          width: 100%;
+          padding: 0.85rem;
+          background: var(--gold);
+          border: none;
+          border-radius: 10px;
+          color: var(--navy);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.9rem;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        .restart-btn {
+          width: 100%;
+          padding: 0.8rem 2rem;
+          background: transparent;
+          border: 1px solid var(--gold);
+          border-radius: 8px;
+          color: var(--gold);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.9rem;
+          font-weight: 500;
+          cursor: pointer;
+        }
+
+        .restart-btn.outline {
+          border-color: var(--navy-border);
+          color: var(--text-dim);
+        }
+
         /* QUIZ DONE */
         .quiz-done {
           text-align: center;
@@ -2680,6 +3632,111 @@ export default function App() {
           color: var(--gold);
         }
 
+        /* MNEMONICS & LAB VALUES */
+        .mnemonics, .lab-values, .progress-tab { padding: 0.25rem 0; }
+
+        .mnemonics-header { margin-bottom: 1.25rem; }
+        .section-title { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.2rem; }
+        .section-sub { font-size: 0.78rem; color: var(--text-dim); }
+
+        .mnemonic-cat-tabs {
+          display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;
+        }
+        .mnemonic-cat-btn {
+          display: flex; align-items: center; gap: 0.3rem;
+          padding: 0.35rem 0.7rem;
+          background: var(--navy-light); border: 1px solid var(--navy-border);
+          border-radius: 100px; color: var(--text-dim);
+          font-family: 'DM Sans', sans-serif; font-size: 0.72rem; cursor: pointer; transition: all 0.2s;
+        }
+        .mnemonic-cat-btn.active { background: var(--mcolor)22; border-color: var(--mcolor); color: var(--mcolor); }
+
+        .mnemonic-list, .lab-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+        .mnemonic-card, .lab-card {
+          background: var(--navy-mid); border: 1px solid var(--navy-border);
+          border-radius: 12px; overflow: hidden; cursor: pointer; transition: border-color 0.2s;
+        }
+        .mnemonic-card.expanded, .lab-card.expanded { border-color: var(--mcolor, var(--lcolor, var(--gold))); }
+        .lab-card.expanded { border-color: var(--lcolor); }
+
+        .mnemonic-top, .lab-top {
+          display: flex; justify-content: space-between; align-items: flex-start;
+          padding: 0.9rem 1rem;
+        }
+        .mnemonic-drug, .lab-name {
+          font-size: 0.9rem; font-weight: 600; color: var(--cream); margin-bottom: 0.25rem;
+        }
+        .mnemonic-phrase { font-size: 0.78rem; color: var(--gold); font-style: italic; }
+        .lab-normal { font-size: 0.72rem; color: var(--text-dim); font-family: 'DM Mono', monospace; }
+        .mnemonic-expand { color: var(--text-dimmer); font-size: 1.25rem; font-weight: 300; }
+
+        .mnemonic-detail, .lab-detail {
+          padding: 0 1rem 1rem; border-top: 1px solid var(--navy-border); padding-top: 0.75rem;
+          font-size: 0.82rem; line-height: 1.6; color: var(--text);
+        }
+
+        .lab-row { display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 0.5rem; }
+        .lab-row p { font-size: 0.8rem; color: var(--text); line-height: 1.5; }
+        .lab-tag {
+          font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em;
+          padding: 0.2rem 0.5rem; border-radius: 6px; white-space: nowrap; margin-top: 0.1rem;
+        }
+        .lab-tag.low { background: #5c8de022; color: #5c8de0; }
+        .lab-tag.high { background: #e05c5c22; color: #e05c5c; }
+        .lab-tag.drugs { background: var(--gold)22; color: var(--gold); }
+
+        /* PROGRESS */
+        .progress-empty {
+          text-align: center; padding: 3rem 1rem;
+        }
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .progress-empty h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.5rem; }
+        .progress-empty p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+
+        .stats-grid {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem;
+        }
+        .stat-card {
+          background: var(--navy-mid); border: 1px solid var(--navy-border);
+          border-radius: 12px; padding: 1rem; text-align: center;
+        }
+        .stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; line-height: 1; margin-bottom: 0.25rem; }
+        .stat-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+
+        .weak-spots {
+          background: var(--navy-mid); border: 1px solid var(--navy-border);
+          border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem;
+        }
+        .ws-title { font-size: 0.85rem; font-weight: 600; color: var(--cream); margin-bottom: 0.25rem; }
+        .ws-sub { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 0.75rem; }
+        .ws-item { margin-bottom: 0.6rem; }
+        .ws-name { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.2rem; }
+        .ws-bar-wrap { display: flex; align-items: center; gap: 0.5rem; }
+        .ws-bar { flex: 1; height: 6px; background: var(--navy-light); border-radius: 100px; overflow: hidden; }
+        .ws-fill { height: 100%; border-radius: 100px; transition: width 0.5s ease; }
+        .ws-pct { font-size: 0.72rem; font-weight: 600; font-family: 'DM Mono', monospace; min-width: 35px; text-align: right; }
+
+        .history-section { margin-bottom: 1rem; }
+        .history-item {
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 0.65rem 0; border-bottom: 1px solid var(--navy-border);
+        }
+        .history-date { font-size: 0.78rem; color: var(--text); margin-bottom: 0.1rem; }
+        .history-mode { font-size: 0.65rem; color: var(--text-dimmer); }
+        .history-score { font-family: 'DM Serif Display', serif; font-size: 1.2rem; text-align: right; }
+        .history-fraction { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.65rem; color: var(--text-dimmer); }
+
+        .clear-btn {
+          background: none; border: 1px solid var(--navy-border); border-radius: 8px;
+          color: var(--text-dimmer); font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
+          padding: 0.5rem 1rem; cursor: pointer; margin-bottom: 0.75rem;
+        }
+        .confirm-clear {
+          background: var(--navy-mid); border: 1px solid var(--red)44; border-radius: 10px;
+          padding: 0.85rem; font-size: 0.82rem; color: var(--text-dim);
+        }
+
         @media (max-width: 600px) {
           .detail-grid { grid-template-columns: 1fr; }
           .pearl-block { grid-column: 1; }
@@ -2713,6 +3770,9 @@ export default function App() {
           {tab === "study" && <StudyGuide />}
           {tab === "cards" && <FlashCards />}
           {tab === "quiz" && <Quiz />}
+          {tab === "mnemonics" && <Mnemonics />}
+          {tab === "labs" && <LabValues />}
+          {tab === "progress" && <Progress />}
           {tab === "tutor" && <AITutor />}
         </main>
       </div>
