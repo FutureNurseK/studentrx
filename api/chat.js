@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'claude-3-5-sonnet-20241022',
-        max_tokens: 1000,
+        max_tokens: 1024,
         system: `You are StudentRX AI — a comprehensive pharmacology tutor for nursing students at all levels, from foundations through NCLEX prep and clinical practice.
 
 YOUR SCOPE — you answer ALL pharmacology questions including:
