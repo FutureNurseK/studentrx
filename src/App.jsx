@@ -1876,16 +1876,23 @@ function AITutor() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": "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",
+          "anthropic-version": "2023-06-01",
+        },
         body: JSON.stringify({
+          model: "claude-3-5-sonnet-20241022",
+          max_tokens: 1024,
+          system: "You are StudentRX AI — a pharmacology tutor for nursing students preparing for NCLEX. Answer all pharmacology questions clearly with NCLEX-relevant clinical pearls. Use bullet points, specific numbers, and nursing-focused language. Cover any drug class asked about.",
           messages: newMessages.map((m) => ({ role: m.role, content: m.content })),
         }),
       });
 
       const data = await response.json();
-      const reply = data.reply || "Sorry, I couldn't generate a response.";
+      const reply = data.content?.[0]?.text || "Sorry, I couldn't generate a response.";
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
       setMessages((prev) => [...prev, { role: "assistant", content: "Connection error. Please try again." }]);
